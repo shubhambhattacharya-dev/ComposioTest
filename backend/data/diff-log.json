@@ -1,390 +1,93 @@
 [
   {
-    "id": 1,
-    "name": "Salesforce",
+    "id": 41,
+    "name": "Shopify",
     "round": 1,
     "field": "authMethods",
     "before": [
       "oauth2",
-      "jwt"
+      "api_key"
+    ],
+    "after": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "reason": "grounding_miss:auth=api_key"
+  },
+  {
+    "id": 41,
+    "name": "Shopify",
+    "round": 1,
+    "field": "apiSurface",
+    "before": {
+      "type": "graphql",
+      "breadth": "wide",
+      "docsUrl": "https://shopify.dev/docs/api"
+    },
+    "after": {
+      "type": "rest",
+      "breadth": "wide",
+      "docsUrl": "https://shopify.dev/docs/admin-api/rest/reference"
+    },
+    "reason": "grounding_miss:auth=api_key"
+  },
+  {
+    "id": 41,
+    "name": "Shopify",
+    "round": 1,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://shopify.dev/docs/api",
+        "kind": "docs",
+        "quote": "Reference documentation for Shopify's APIs, libraries, and developer tools, plus the concepts that apply across all of them.",
+        "fetchedAt": "2026-11-23T12:38:27.133Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://shopify.dev/docs/api",
+        "kind": "docs",
+        "quote": "Explore Shopify's APIs, references, and developer tools.",
+        "fetchedAt": "2026-11-23T13:00:37.967Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:auth=api_key"
+  },
+  {
+    "id": 11,
+    "name": "Zendesk",
+    "round": 1,
+    "field": "authMethods",
+    "before": [
+      "oauth2",
+      "api_key",
+      "basic"
     ],
     "after": [
       "unknown"
     ],
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=oauth2,auth=api_key,auth=basic"
   },
   {
-    "id": 1,
-    "name": "Salesforce",
+    "id": 11,
+    "name": "Zendesk",
     "round": 1,
     "field": "accessModel",
     "before": "self_serve_trial",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 1,
-    "name": "Salesforce",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://developer.salesforce.com/docs"
-    },
-    "after": {
-      "type": "none_found",
-      "breadth": "unknown",
-      "docsUrl": "https://developer.salesforce.com/docs"
-    },
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 1,
-    "name": "Salesforce",
-    "round": 1,
-    "field": "hasMcp",
-    "before": "official_mcp",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 1,
-    "name": "Salesforce",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "unknown"
-    },
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 1,
-    "name": "Salesforce",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developer.salesforce.com/docs",
-        "kind": "docs",
-        "quote": "Browse docs Start Learning Browse Get Support",
-        "fetchedAt": "2026-11-23T11:47:10.715Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developer.salesforce.com/docs",
-        "kind": "docs",
-        "quote": "Browse docs Start Learning Browse Get Support",
-        "fetchedAt": "2026-11-23T12:43:39.182Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 3,
-    "name": "Pipedrive",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "api_key"
-    ],
-    "after": [
-      "oauth2",
-      "api_key"
-    ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 3,
-    "name": "Pipedrive",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "toolkit_ready"
-    },
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 3,
-    "name": "Pipedrive",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developers.pipedrive.com/docs/api/v1",
-        "kind": "docs",
-        "quote": "The API token can be obtained manually from the Pipedrive app.",
-        "fetchedAt": "2026-11-23T11:47:10.720Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developers.pipedrive.com/docs/api/v1",
-        "kind": "docs",
-        "quote": "This reference helps you implement the RESTful Pipedrive API. The API token can be obtained manually from the Pipedrive app.",
-        "fetchedAt": "2026-11-23T12:43:39.186Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 16,
-    "name": "LiveAgent",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developers.liveagent.com/",
-        "kind": "docs",
-        "quote": "LiveAgent API v3 provides REST endpoints for tickets, contacts, chats and more.",
-        "fetchedAt": "2026-11-23T12:30:00.000Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developers.liveagent.com/",
-        "kind": "docs",
-        "quote": "LiveAgent API v3 provides REST endpoints for tickets, contacts, chats and more.",
-        "fetchedAt": "2026-11-23T12:30:00.000Z",
-        "httpStatus": 0
-      }
-    ],
-    "reason": "fetch_error:https://developers.liveagent.com/"
-  },
-  {
-    "id": 16,
-    "name": "LiveAgent",
-    "round": 1,
-    "field": "confidence",
-    "before": "medium",
-    "after": "low",
-    "reason": "fetch_error:https://developers.liveagent.com/"
-  },
-  {
-    "id": 2,
-    "name": "HubSpot",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "oauth2",
-      "api_key"
-    ],
-    "after": [
-      "oauth2"
-    ],
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 2,
-    "name": "HubSpot",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "toolkit_ready"
-    },
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 2,
-    "name": "HubSpot",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
-        "kind": "docs",
-        "quote": "Authentication OAuth tokens",
-        "fetchedAt": "2026-11-23T12:20:13.926Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
-        "kind": "docs",
-        "quote": "The 2026-09 APIs use a date-based versioning scheme (e.g., /crm/2026-09/) that follows the previous 2026-03 API version.",
-        "fetchedAt": "2026-11-23T12:43:39.186Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 7,
-    "name": "Zoho CRM",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "oauth2"
-    ],
-    "after": [
-      "unknown"
-    ],
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 7,
-    "name": "Zoho CRM",
-    "round": 1,
-    "field": "accessModel",
-    "before": "self_serve_free",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 7,
-    "name": "Zoho CRM",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://www.zoho.com/crm/developer/docs/api/v6/"
-    },
-    "after": {
-      "type": "rest",
-      "breadth": "unknown",
-      "docsUrl": "https://www.zoho.com/crm/developer/docs/api/v6/"
-    },
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 7,
-    "name": "Zoho CRM",
-    "round": 1,
-    "field": "hasMcp",
-    "before": "none_found",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 7,
-    "name": "Zoho CRM",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "unknown"
-    },
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 7,
-    "name": "Zoho CRM",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://www.zoho.com/crm/developer/docs/api/v6/",
-        "kind": "docs",
-        "quote": "Entity APIsPerform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints.",
-        "fetchedAt": "2026-11-23T12:20:13.937Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://www.zoho.com/crm/developer/docs/api/v6/",
-        "kind": "docs",
-        "quote": "Entity APIsPerform CRUD operations on CRM module entities and integrate with any third party application through flexible RESTful endpoints.",
-        "fetchedAt": "2026-11-23T12:43:39.187Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 7,
-    "name": "Zoho CRM",
-    "round": 1,
-    "field": "confidence",
-    "before": "high",
-    "after": "medium",
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 11,
-    "name": "Zendesk",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "oauth2",
-      "api_key"
-    ],
-    "after": [
-      "unknown"
-    ],
-    "reason": "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
-  },
-  {
-    "id": 11,
-    "name": "Zendesk",
-    "round": 1,
-    "field": "accessModel",
-    "before": "self_serve_paid",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
-  },
-  {
-    "id": 11,
-    "name": "Zendesk",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://developer.zendesk.com/api-reference/"
-    },
-    "after": {
-      "type": "unknown",
-      "breadth": "unknown",
-      "docsUrl": "https://developer.zendesk.com/api-reference/"
-    },
-    "reason": "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
+    "after": "self_serve_free",
+    "reason": "grounding_miss:auth=oauth2,auth=api_key,auth=basic"
   },
   {
     "id": 11,
     "name": "Zendesk",
     "round": 1,
     "field": "hasMcp",
-    "before": "official_mcp",
+    "before": "none_found",
     "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
-  },
-  {
-    "id": 11,
-    "name": "Zendesk",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "unknown"
-    },
-    "reason": "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=oauth2,auth=api_key,auth=basic"
   },
   {
     "id": 11,
@@ -392,15 +95,6 @@
     "round": 1,
     "field": "evidenceUrls",
     "before": [
-      {
-        "url": "https://developer.zendesk.com/api-reference/",
-        "kind": "docs",
-        "quote": "Welcome to the Zendesk API reference docs. Whether you're an experienced developer and Zendesk user or just starting out, this is where you'll find the documentation you need.",
-        "fetchedAt": "2026-11-23T12:20:23.101Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
       {
         "url": "https://developer.zendesk.com/api-reference/",
         "kind": "docs",
@@ -409,7 +103,16 @@
         "httpStatus": 200
       }
     ],
-    "reason": "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
+    "after": [
+      {
+        "url": "https://developer.zendesk.com/api-reference/",
+        "kind": "docs",
+        "quote": "DocumentationAPI ReferenceSearch/API ReferenceAPI ReferenceHomeIntroductionBetas and EAPsChangelogCapabilitiesTicketingHelp CenterAI AgentsConversations (Messaging)VoiceCustom DataWorkforce Management (WFM)QAOmnichannelStatusLive ChatSales ",
+        "fetchedAt": "2026-11-23T13:00:33.486Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:auth=oauth2,auth=api_key,auth=basic"
   },
   {
     "id": 11,
@@ -417,134 +120,60 @@
     "round": 1,
     "field": "confidence",
     "before": "high",
-    "after": "low",
-    "reason": "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
-  },
-  {
-    "id": 24,
-    "name": "Lark (Larksuite)",
-    "round": 1,
-    "field": "accessModel",
-    "before": "self_serve_free",
-    "after": "unknown",
-    "reason": "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 24,
-    "name": "Lark (Larksuite)",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "medium",
-      "docsUrl": "https://open.larksuite.com/document/home/index"
-    },
-    "after": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://open.larksuite.com/document/home/index"
-    },
-    "reason": "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 24,
-    "name": "Lark (Larksuite)",
-    "round": 1,
-    "field": "hasMcp",
-    "before": "official_mcp",
-    "after": "unknown",
-    "reason": "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 24,
-    "name": "Lark (Larksuite)",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "toolkit_ready"
-    },
-    "reason": "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 24,
-    "name": "Lark (Larksuite)",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://open.larksuite.com/document/home/index",
-        "kind": "docs",
-        "quote": "Lark Open Platform provides RESTful APIs for developers.",
-        "fetchedAt": "2026-11-23T12:22:14.873Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://open.larksuite.com/document/home/index",
-        "kind": "docs",
-        "quote": "Lark Open Platform",
-        "fetchedAt": "2026-11-23T12:43:42.104Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 24,
-    "name": "Lark (Larksuite)",
-    "round": 1,
-    "field": "confidence",
-    "before": "high",
     "after": "medium",
-    "reason": "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=oauth2,auth=api_key,auth=basic"
   },
   {
-    "id": 27,
-    "name": "Telegram",
+    "id": 1,
+    "name": "Salesforce",
     "round": 1,
     "field": "authMethods",
     "before": [
-      "api_key"
+      "oauth2"
     ],
     "after": [
       "unknown"
     ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
   },
   {
-    "id": 27,
-    "name": "Telegram",
+    "id": 1,
+    "name": "Salesforce",
     "round": 1,
     "field": "accessModel",
     "before": "self_serve_free",
     "after": "unknown",
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
   },
   {
-    "id": 27,
-    "name": "Telegram",
+    "id": 1,
+    "name": "Salesforce",
     "round": 1,
     "field": "apiSurface",
     "before": {
       "type": "rest",
       "breadth": "wide",
-      "docsUrl": "https://core.telegram.org/bots/api"
+      "docsUrl": "https://developer.salesforce.com/docs"
     },
     "after": {
-      "type": "rest",
+      "type": "unknown",
       "breadth": "unknown",
-      "docsUrl": "https://core.telegram.org/bots/api"
+      "docsUrl": "https://developer.salesforce.com/docs"
     },
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
   },
   {
-    "id": 27,
-    "name": "Telegram",
+    "id": 1,
+    "name": "Salesforce",
+    "round": 1,
+    "field": "hasMcp",
+    "before": "official_mcp",
+    "after": "unknown",
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+  },
+  {
+    "id": 1,
+    "name": "Salesforce",
     "round": 1,
     "field": "buildability",
     "before": {
@@ -553,686 +182,48 @@
     "after": {
       "verdict": "unknown"
     },
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
   },
   {
-    "id": 27,
-    "name": "Telegram",
+    "id": 1,
+    "name": "Salesforce",
     "round": 1,
     "field": "evidenceUrls",
     "before": [
       {
-        "url": "https://core.telegram.org/bots/api",
+        "url": "https://developer.salesforce.com/docs",
         "kind": "docs",
-        "quote": "Telegram Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
-        "fetchedAt": "2026-11-23T12:38:23.720Z",
+        "quote": "Browse docs Start Learning Browse Get Support",
+        "fetchedAt": "2026-11-23T12:43:39.182Z",
         "httpStatus": 200
       }
     ],
     "after": [
       {
-        "url": "https://core.telegram.org/bots/api",
+        "url": "https://developer.salesforce.com/docs",
         "kind": "docs",
-        "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
-        "fetchedAt": "2026-11-23T12:43:42.507Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 27,
-    "name": "Telegram",
-    "round": 1,
-    "field": "confidence",
-    "before": "high",
-    "after": "medium",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "oauth2"
-    ],
-    "after": [
-      "unknown"
-    ],
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 1,
-    "field": "accessModel",
-    "before": "admin_approval",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11"
-    },
-    "after": {
-      "type": "unknown",
-      "breadth": "unknown",
-      "docsUrl": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11"
-    },
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "needs_work",
-      "blocker": "Requires LinkedIn approval and OAuth 2.0 authentication"
-    },
-    "after": {
-      "verdict": "unknown"
-    },
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
-        "kind": "docs",
-        "quote": "The LinkedIn Marketing Platform helps businesses grow by building technology to reach, engage, and convert professional audiences at scale.",
-        "fetchedAt": "2026-11-23T12:23:15.567Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
-        "kind": "docs",
-        "quote": "The LinkedIn Marketing Platform helps businesses grow by building technology to reach, engage, and convert professional audiences at scale.",
-        "fetchedAt": "2026-11-23T12:43:44.351Z",
+        "quote": "Browse docs Start Learning Browse Get Support",
+        "fetchedAt": "2026-11-23T13:00:33.403Z",
         "httpStatus": 200
       }
     ],
     "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
   },
   {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 1,
-    "field": "confidence",
-    "before": "high",
-    "after": "medium",
-    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
-  },
-  {
-    "id": 72,
-    "name": "Airtable",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "api_key",
-      "bearer_token"
-    ],
-    "after": [
-      "unknown"
-    ],
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 72,
-    "name": "Airtable",
-    "round": 1,
-    "field": "accessModel",
-    "before": "self_serve_free",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 72,
-    "name": "Airtable",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://airtable.com/developers/web/api/introduction"
-    },
-    "after": {
-      "type": "unknown",
-      "breadth": "unknown",
-      "docsUrl": "https://airtable.com/developers/web/api/introduction"
-    },
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 72,
-    "name": "Airtable",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "unknown"
-    },
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 72,
-    "name": "Airtable",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://airtable.com/developers/web/api/introduction",
-        "kind": "docs",
-        "quote": "Airtable's API is a simple REST API that lets you read and write data in your bases.",
-        "fetchedAt": "2026-11-23T12:32:36.354Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://airtable.com/developers/web/api/introduction",
-        "kind": "docs",
-        "quote": "Your browser version is not supported. Try our desktop apps!Alternatively, use the latest version of Chrome, Firefox, Safari, or Edge instead.",
-        "fetchedAt": "2026-11-23T12:44:03.077Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 72,
-    "name": "Airtable",
+    "id": 1,
+    "name": "Salesforce",
     "round": 1,
     "field": "confidence",
     "before": "high",
     "after": "low",
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 79,
-    "name": "Smartsheet",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "basic",
-      "oauth2",
-      "bearer_token",
-      "unknown"
-    ],
-    "after": [
-      "basic"
-    ],
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 79,
-    "name": "Smartsheet",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://developers.smartsheet.com/api"
-    },
-    "after": {
-      "type": "rest",
-      "breadth": "unknown",
-      "docsUrl": "https://developers.smartsheet.com/api"
-    },
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 79,
-    "name": "Smartsheet",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "unknown",
-      "blocker": "unknown"
-    },
-    "after": {
-      "verdict": "unknown"
-    },
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 79,
-    "name": "Smartsheet",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://smartsheet.redoc.ly/",
-        "kind": "docs",
-        "quote": "The new Smartsheet API reference documentation site is located at https://developers.smartsheet.com/api. AuthenticationPlaceholderAuth Security Scheme Type HTTP HTTP Authorization Scheme basic",
-        "fetchedAt": "2026-11-23T12:40:49.919Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://smartsheet.redoc.ly/",
-        "kind": "docs",
-        "quote": "Auth Security Scheme Type HTTP HTTP Authorization Scheme basic ➔ Next to placeholder. The new Smartsheet API reference documentation site is located at https://developers.smartsheet.com/api.",
-        "fetchedAt": "2026-11-23T12:44:05.897Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 79,
-    "name": "Smartsheet",
-    "round": 1,
-    "field": "confidence",
-    "before": "medium",
-    "after": "high",
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 35,
-    "name": "Mailchimp",
-    "round": 1,
-    "field": "confidence",
-    "before": "high",
-    "after": "low",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 39,
-    "name": "Threads (Meta)",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "oauth2"
-    ],
-    "after": [
-      "unknown"
-    ],
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 39,
-    "name": "Threads (Meta)",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "medium",
-      "docsUrl": "https://developers.facebook.com/documentation/threads"
-    },
-    "after": {
-      "type": "rest",
-      "breadth": "medium",
-      "docsUrl": "https://developers.facebook.com/documentation/threads/reference"
-    },
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 39,
-    "name": "Threads (Meta)",
-    "round": 1,
-    "field": "hasMcp",
-    "before": "none_found",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 39,
-    "name": "Threads (Meta)",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "toolkit_ready",
-      "blocker": "none"
-    },
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 39,
-    "name": "Threads (Meta)",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developers.facebook.com/documentation/threads",
-        "kind": "docs",
-        "quote": "Threads API Use the Threads API to create and publish posts, retrieve media and profiles, moderate replies, and access insights.",
-        "fetchedAt": "2026-11-23T12:23:52.152Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developers.facebook.com/documentation/threads",
-        "kind": "docs",
-        "quote": "Use the Threads API to create and publish posts, retrieve media and profiles, moderate replies, and access insights.",
-        "fetchedAt": "2026-11-23T12:43:51.815Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 87,
-    "name": "Xero",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "oauth2"
-    ],
-    "after": [
-      "unknown"
-    ],
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 87,
-    "name": "Xero",
-    "round": 1,
-    "field": "accessModel",
-    "before": "self_serve_free",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 87,
-    "name": "Xero",
-    "round": 1,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://developer.xero.com/documentation/api/accounting/overview"
-    },
-    "after": {
-      "type": "unknown",
-      "breadth": "unknown",
-      "docsUrl": "https://developer.xero.com/documentation/api/accounting/overview"
-    },
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 87,
-    "name": "Xero",
-    "round": 1,
-    "field": "hasMcp",
-    "before": "none_found",
-    "after": "unknown",
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 87,
-    "name": "Xero",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "unknown"
-    },
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 87,
-    "name": "Xero",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developer.xero.com/documentation/api/accounting/overview",
-        "kind": "docs",
-        "quote": "All Xero API calls require OAuth 2.0 authentication. The API is a RESTful JSON API that follows standard HTTP methods.",
-        "fetchedAt": "2026-11-23T12:35:17.611Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developer.xero.com/documentation/api/accounting/overview",
-        "kind": "docs",
-        "quote": "",
-        "fetchedAt": "2026-11-23T12:44:15.200Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 87,
-    "name": "Xero",
-    "round": 1,
-    "field": "confidence",
-    "before": "high",
-    "after": "low",
-    "reason": "grounding_miss:auth=oauth2"
-  },
-  {
-    "id": 28,
-    "name": "WhatsApp Business",
-    "round": 1,
-    "field": "authMethods",
-    "before": [
-      "bearer_token"
-    ],
-    "after": [
-      "oauth2"
-    ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 28,
-    "name": "WhatsApp Business",
-    "round": 1,
-    "field": "accessModel",
-    "before": "self_serve_paid",
-    "after": "admin_approval",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 28,
-    "name": "WhatsApp Business",
-    "round": 1,
-    "field": "hasMcp",
-    "before": "official_mcp",
-    "after": "none_found",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 28,
-    "name": "WhatsApp Business",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "needs_work",
-      "blocker": "Requires Meta Business Manager approval and verified business account."
-    },
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 28,
-    "name": "WhatsApp Business",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
-        "kind": "docs",
-        "quote": "Access tokens",
-        "fetchedAt": "2026-11-23T12:22:34.842Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
-        "kind": "docs",
-        "quote": "WhatsApp Business PlatformOverviewAbout the platformAccess tokensPermissionsPricing",
-        "fetchedAt": "2026-11-23T12:43:43.966Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 83,
-    "name": "Binance",
-    "round": 1,
-    "field": "hasMcp",
-    "before": "unknown",
-    "after": "none_found",
-    "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
-  },
-  {
-    "id": 83,
-    "name": "Binance",
-    "round": 1,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "toolkit_ready"
-    },
-    "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
-  },
-  {
-    "id": 83,
-    "name": "Binance",
-    "round": 1,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
-        "kind": "changelog",
-        "quote": "Binance Spot API",
-        "fetchedAt": "2026-11-23T12:34:30.252Z",
-        "httpStatus": 202
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
-        "kind": "docs",
-        "quote": "The Binance Spot API provides RESTful endpoints for market data and account/trading operations. All requests must be signed with HMAC SHA256 using your API Secret. API Key is passed in the X-MBX-APIKEY header.",
-        "fetchedAt": "2026-11-23T12:44:11.861Z",
-        "httpStatus": 202
-      }
-    ],
-    "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
-  },
-  {
-    "id": 83,
-    "name": "Binance",
-    "round": 1,
-    "field": "confidence",
-    "before": "medium",
-    "after": "high",
-    "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
-  },
-  {
-    "id": 75,
-    "name": "Asana",
-    "round": 1,
-    "field": "confidence",
-    "before": "high",
-    "after": "low",
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 3,
-    "name": "Pipedrive",
-    "round": 2,
-    "field": "accessModel",
-    "before": "self_serve_free",
-    "after": "unknown",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 3,
-    "name": "Pipedrive",
-    "round": 2,
-    "field": "hasMcp",
-    "before": "official_mcp",
-    "after": "unknown",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 3,
-    "name": "Pipedrive",
-    "round": 2,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://developers.pipedrive.com/docs/api/v1",
-        "kind": "docs",
-        "quote": "This reference helps you implement the RESTful Pipedrive API. The API token can be obtained manually from the Pipedrive app.",
-        "fetchedAt": "2026-11-23T12:43:39.186Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://developers.pipedrive.com/docs/api/v1",
-        "kind": "docs",
-        "quote": "This reference helps you implement the RESTful Pipedrive API. This API uses a JSON format for output and is capable of handling CORS (Cross-Origin Resource Sharing) requests.",
-        "fetchedAt": "2026-11-23T12:45:33.827Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
   },
   {
     "id": 24,
     "name": "Lark (Larksuite)",
-    "round": 2,
-    "field": "accessModel",
-    "before": "unknown",
-    "after": "self_serve_free",
-    "reason": "js_shell_ungrounded:auth=oauth2"
-  },
-  {
-    "id": 24,
-    "name": "Lark (Larksuite)",
-    "round": 2,
+    "round": 1,
     "field": "evidenceUrls",
     "before": [
-      {
-        "url": "https://open.larksuite.com/document/home/index",
-        "kind": "docs",
-        "quote": "Lark Open Platform",
-        "fetchedAt": "2026-11-23T12:43:42.104Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
       {
         "url": "https://open.larksuite.com/document/home/index",
         "kind": "docs",
@@ -1241,119 +232,108 @@
         "httpStatus": 200
       }
     ],
+    "after": [
+      {
+        "url": "https://open.larksuite.com/document/home/index",
+        "kind": "docs",
+        "quote": "Lark Open Platform",
+        "fetchedAt": "2026-11-23T13:00:33.510Z",
+        "httpStatus": 200
+      }
+    ],
     "reason": "js_shell_ungrounded:auth=oauth2"
   },
   {
-    "id": 27,
-    "name": "Telegram",
-    "round": 2,
-    "field": "hasMcp",
-    "before": "official_mcp",
-    "after": "unknown",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 27,
-    "name": "Telegram",
-    "round": 2,
-    "field": "evidenceUrls",
-    "before": [
-      {
-        "url": "https://core.telegram.org/bots/api",
-        "kind": "docs",
-        "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
-        "fetchedAt": "2026-11-23T12:43:42.507Z",
-        "httpStatus": 200
-      }
-    ],
-    "after": [
-      {
-        "url": "https://core.telegram.org/bots/api",
-        "kind": "docs",
-        "quote": "The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.",
-        "fetchedAt": "2026-11-23T12:45:33.855Z",
-        "httpStatus": 200
-      }
-    ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 2,
+    "id": 51,
+    "name": "DataForSEO",
+    "round": 1,
     "field": "authMethods",
     "before": [
-      "unknown"
+      "basic"
     ],
     "after": [
-      "oauth2"
+      "unknown"
     ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=basic,hasMcp=official_mcp"
   },
   {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 2,
+    "id": 51,
+    "name": "DataForSEO",
+    "round": 1,
     "field": "accessModel",
-    "before": "unknown",
-    "after": "admin_approval",
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "before": "self_serve_trial",
+    "after": "self_serve_paid",
+    "reason": "grounding_miss:auth=basic,hasMcp=official_mcp"
   },
   {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 2,
-    "field": "apiSurface",
-    "before": {
-      "type": "unknown",
-      "breadth": "unknown",
-      "docsUrl": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11"
-    },
-    "after": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11"
-    },
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 2,
-    "field": "hasMcp",
-    "before": "official_mcp",
-    "after": "none_found",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 2,
+    "id": 51,
+    "name": "DataForSEO",
+    "round": 1,
     "field": "buildability",
     "before": {
-      "verdict": "unknown"
+      "verdict": "toolkit_ready"
     },
     "after": {
       "verdict": "needs_work",
-      "blocker": "Requires LinkedIn Marketing API Program approval and specific integration requirements."
+      "blocker": "Authentication method not explicitly documented in the fetched page."
     },
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "reason": "grounding_miss:auth=basic,hasMcp=official_mcp"
   },
   {
-    "id": 33,
-    "name": "LinkedIn Ads",
-    "round": 2,
+    "id": 51,
+    "name": "DataForSEO",
+    "round": 1,
     "field": "evidenceUrls",
     "before": [
       {
-        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+        "url": "https://docs.dataforseo.com/v3/",
         "kind": "docs",
-        "quote": "The LinkedIn Marketing Platform helps businesses grow by building technology to reach, engage, and convert professional audiences at scale.",
-        "fetchedAt": "2026-11-23T12:43:44.351Z",
+        "quote": "Authentication SERP API Overview ... Task POST Tasks Ready Task GET Advanced Regular HTML Live Advanced Regular HTML",
+        "fetchedAt": "2026-11-23T12:39:12.602Z",
         "httpStatus": 200
       }
     ],
     "after": [
+      {
+        "url": "https://docs.dataforseo.com/v3/",
+        "kind": "docs",
+        "quote": "Authentication SERP API Overview",
+        "fetchedAt": "2026-11-23T13:00:37.975Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:auth=basic,hasMcp=official_mcp"
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "round": 1,
+    "field": "confidence",
+    "before": "high",
+    "after": "medium",
+    "reason": "grounding_miss:auth=basic,hasMcp=official_mcp"
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "round": 1,
+    "field": "buildability",
+    "before": {
+      "verdict": "needs_work",
+      "blocker": "Requires LinkedIn Marketing API Program approval and specific integration requirements."
+    },
+    "after": {
+      "verdict": "needs_work",
+      "blocker": "Requires LinkedIn Marketing Platform developer account approval and OAuth2 setup."
+    },
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "round": 1,
+    "field": "evidenceUrls",
+    "before": [
       {
         "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
         "kind": "docs",
@@ -1362,15 +342,624 @@
         "httpStatus": 200
       }
     ],
-    "reason": "grounding_miss:hasMcp=official_mcp"
+    "after": [
+      {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+        "kind": "docs",
+        "quote": "The LinkedIn Marketing Platform helps businesses grow by building technology to reach, engage, and convert professional audiences at scale. The platform offers APIs to create LinkedIn marketing campaigns, to report campaign performance, to manage leads, and to grow a company Page.",
+        "fetchedAt": "2026-11-23T13:00:33.516Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:auth=oauth2"
   },
   {
     "id": 33,
     "name": "LinkedIn Ads",
+    "round": 1,
+    "field": "confidence",
+    "before": "low",
+    "after": "high",
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "round": 1,
+    "field": "authMethods",
+    "before": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "after": [
+      "unknown"
+    ],
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "round": 1,
+    "field": "accessModel",
+    "before": "self_serve_free",
+    "after": "unknown",
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "round": 1,
+    "field": "apiSurface",
+    "before": {
+      "type": "rest",
+      "breadth": "wide",
+      "docsUrl": "https://airtable.com/developers/web/api/introduction"
+    },
+    "after": {
+      "type": "unknown",
+      "breadth": "unknown",
+      "docsUrl": "https://airtable.com/developers/web/api/introduction"
+    },
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "round": 1,
+    "field": "hasMcp",
+    "before": "community_mcp",
+    "after": "unknown",
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "round": 1,
+    "field": "buildability",
+    "before": {
+      "verdict": "toolkit_ready"
+    },
+    "after": {
+      "verdict": "unknown"
+    },
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "round": 1,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://airtable.com/developers/web/api/introduction",
+        "kind": "docs",
+        "quote": "Your browser version is not supported. Try our desktop apps!Alternatively, use the latest version of Chrome, Firefox, Safari, or Edge instead.",
+        "fetchedAt": "2026-11-23T12:44:03.077Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://airtable.com/developers/web/api/introduction",
+        "kind": "docs",
+        "quote": "Your browser version is not supported. Try our desktop apps!Alternatively, use the latest version of Chrome, Firefox, Safari, or Edge instead.",
+        "fetchedAt": "2026-11-23T13:00:44.075Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "round": 1,
+    "field": "confidence",
+    "before": "high",
+    "after": "low",
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 1,
+    "field": "accessModel",
+    "before": "self_serve_free",
+    "after": "self_serve_paid",
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 1,
+    "field": "buildability",
+    "before": {
+      "verdict": "toolkit_ready",
+      "blocker": ""
+    },
+    "after": {
+      "verdict": "toolkit_ready"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 1,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://docs.stripe.com/api",
+        "kind": "docs",
+        "quote": "The Stripe API is organized around REST.",
+        "fetchedAt": "2026-11-23T12:34:16.926Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://docs.stripe.com/api",
+        "kind": "docs",
+        "quote": "The Stripe API is organized around REST.",
+        "fetchedAt": "2026-11-23T13:00:46.155Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "round": 1,
+    "field": "confidence",
+    "before": "high",
+    "after": "low",
+    "reason": "http_404:https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 1,
+    "field": "accessModel",
+    "before": "self_serve_free",
+    "after": "unknown",
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 1,
+    "field": "apiSurface",
+    "before": {
+      "type": "rest",
+      "breadth": "wide",
+      "docsUrl": "https://docs.github.com/en/rest"
+    },
+    "after": {
+      "type": "rest",
+      "breadth": "unknown",
+      "docsUrl": "https://docs.github.com/en/rest"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 1,
+    "field": "buildability",
+    "before": {
+      "verdict": "toolkit_ready"
+    },
+    "after": {
+      "verdict": "unknown"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 1,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://docs.github.com/en/rest",
+        "kind": "docs",
+        "quote": "Skip to main contentSkip to contentGitHub DocsSearch or ask Copilot/MenuCollapse sidebarExpand sidebarHomeREST APIREST APIAPI Version: 2026-03-10 (latest)QuickstartAbout the REST APIAbout the REST APIComparing GitHub's APIsAPI VersionsBreak",
+        "fetchedAt": "2026-11-23T12:39:34.548Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://docs.github.com/en/rest",
+        "kind": "docs",
+        "quote": "REST APIAPI Version: 2026-03-10 (latest)",
+        "fetchedAt": "2026-11-23T13:00:42.698Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "round": 1,
+    "field": "authMethods",
+    "before": [
+      "oauth2"
+    ],
+    "after": [
+      "unknown"
+    ],
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "round": 1,
+    "field": "accessModel",
+    "before": "self_serve_paid",
+    "after": "unknown",
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "round": 1,
+    "field": "apiSurface",
+    "before": {
+      "type": "rest",
+      "breadth": "narrow",
+      "docsUrl": "https://help.otter.ai/"
+    },
+    "after": {
+      "type": "none_found",
+      "breadth": "unknown",
+      "docsUrl": "https://help.otter.ai/hc/en-us"
+    },
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "round": 1,
+    "field": "hasMcp",
+    "before": "official_mcp",
+    "after": "none_found",
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "round": 1,
+    "field": "buildability",
+    "before": {
+      "verdict": "needs_work",
+      "blocker": "Official MCP server requires paid Otter Business/Enterprise plan"
+    },
+    "after": {
+      "verdict": "unknown"
+    },
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "round": 1,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://help.otter.ai/hc/en-us",
+        "kind": "docs",
+        "quote": "What is Otter? Otter.ai features",
+        "fetchedAt": "2026-11-23T12:41:30.067Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://help.otter.ai/hc/en-us",
+        "kind": "docs",
+        "quote": "What is Otter? Otter.ai features",
+        "fetchedAt": "2026-11-23T13:00:55.693Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "round": 1,
+    "field": "confidence",
+    "before": "high",
+    "after": "low",
+    "reason": "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "round": 1,
+    "field": "hasMcp",
+    "before": "unknown",
+    "after": "none_found",
+    "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "round": 1,
+    "field": "buildability",
+    "before": {
+      "verdict": "toolkit_ready"
+    },
+    "after": {
+      "verdict": "unknown"
+    },
+    "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "round": 1,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
+        "kind": "docs",
+        "quote": "The Binance Spot API provides RESTful endpoints for market data, account information, and order execution. All endpoints require an API Key and a signature generated using HMAC SHA256. The API is publicly available and free to use with rate limits.",
+        "fetchedAt": "2026-11-23T12:45:38.041Z",
+        "httpStatus": 202
+      }
+    ],
+    "after": [
+      {
+        "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
+        "kind": "docs",
+        "quote": "The Binance Spot API provides RESTful endpoints for market data and trading. All requests must be signed with HMAC SHA256 using your secret key.",
+        "fetchedAt": "2026-11-23T13:00:46.161Z",
+        "httpStatus": 202
+      }
+    ],
+    "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "round": 1,
+    "field": "confidence",
+    "before": "low",
+    "after": "high",
+    "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "round": 1,
+    "field": "authMethods",
+    "before": [
+      "oauth2",
+      "api_key"
+    ],
+    "after": [
+      "api_key",
+      "oauth2"
+    ],
+    "reason": "grounding_miss:auth=api_key"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "round": 1,
+    "field": "accessModel",
+    "before": "self_serve_free",
+    "after": "unknown",
+    "reason": "grounding_miss:auth=api_key"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "round": 1,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://developers.asana.com/docs/overview",
+        "kind": "docs",
+        "quote": "An Asana app makes it possible to extend or enhance what’s possible with Asana. Many people build Asana apps to integrate with other tools, add or extract data about the Work Graph, or automate workflows.",
+        "fetchedAt": "2026-11-23T12:45:37.640Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://developers.asana.com/docs/overview",
+        "kind": "docs",
+        "quote": "Authentication Personal access token OAuth OAuth Code Samples / Libraries OAuth scopes OpenID Connect ... MCP Server ...",
+        "fetchedAt": "2026-11-23T13:00:44.497Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:auth=api_key"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "round": 1,
+    "field": "confidence",
+    "before": "low",
+    "after": "high",
+    "reason": "grounding_miss:auth=api_key"
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "round": 2,
+    "field": "authMethods",
+    "before": [
+      "oauth2"
+    ],
+    "after": [
+      "unknown"
+    ],
+    "reason": "js_shell_ungrounded:auth=oauth2"
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "round": 2,
+    "field": "accessModel",
+    "before": "self_serve_free",
+    "after": "unknown",
+    "reason": "js_shell_ungrounded:auth=oauth2"
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "round": 2,
+    "field": "apiSurface",
+    "before": {
+      "type": "rest",
+      "breadth": "wide",
+      "docsUrl": "https://open.larksuite.com/document/home/index"
+    },
+    "after": {
+      "type": "unknown",
+      "breadth": "unknown",
+      "docsUrl": "https://open.larksuite.com/document/home/index"
+    },
+    "reason": "js_shell_ungrounded:auth=oauth2"
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "round": 2,
+    "field": "buildability",
+    "before": {
+      "verdict": "toolkit_ready"
+    },
+    "after": {
+      "verdict": "unknown"
+    },
+    "reason": "js_shell_ungrounded:auth=oauth2"
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "round": 2,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://open.larksuite.com/document/home/index",
+        "kind": "docs",
+        "quote": "Lark Open Platform",
+        "fetchedAt": "2026-11-23T13:00:33.510Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://open.larksuite.com/document/home/index",
+        "kind": "docs",
+        "quote": "",
+        "fetchedAt": "2026-11-23T13:01:48.622Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "js_shell_ungrounded:auth=oauth2"
+  },
+  {
+    "id": 24,
+    "name": "Lark (Larksuite)",
     "round": 2,
     "field": "confidence",
     "before": "medium",
-    "after": "high",
+    "after": "low",
+    "reason": "js_shell_ungrounded:auth=oauth2"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 2,
+    "field": "authMethods",
+    "before": [
+      "api_key",
+      "oauth2"
+    ],
+    "after": [
+      "unknown"
+    ],
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 2,
+    "field": "accessModel",
+    "before": "self_serve_paid",
+    "after": "unknown",
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 2,
+    "field": "apiSurface",
+    "before": {
+      "type": "rest",
+      "breadth": "wide",
+      "docsUrl": "https://docs.stripe.com/api"
+    },
+    "after": {
+      "type": "rest",
+      "breadth": "unknown",
+      "docsUrl": "https://docs.stripe.com/api"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 2,
+    "field": "buildability",
+    "before": {
+      "verdict": "toolkit_ready"
+    },
+    "after": {
+      "verdict": "unknown"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 2,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://docs.stripe.com/api",
+        "kind": "docs",
+        "quote": "The Stripe API is organized around REST.",
+        "fetchedAt": "2026-11-23T13:00:46.155Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://docs.stripe.com/api",
+        "kind": "docs",
+        "quote": "The Stripe API is organized around REST.",
+        "fetchedAt": "2026-11-23T13:01:51.211Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "round": 2,
+    "field": "confidence",
+    "before": "high",
+    "after": "medium",
     "reason": "grounding_miss:hasMcp=official_mcp"
   },
   {
@@ -1391,8 +980,8 @@
       {
         "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
         "kind": "docs",
-        "quote": "The Binance Spot API provides RESTful endpoints for market data and account/trading operations. All requests must be signed with HMAC SHA256 using your API Secret. API Key is passed in the X-MBX-APIKEY header.",
-        "fetchedAt": "2026-11-23T12:44:11.861Z",
+        "quote": "The Binance Spot API provides RESTful endpoints for market data and trading. All requests must be signed with HMAC SHA256 using your secret key.",
+        "fetchedAt": "2026-11-23T13:00:46.161Z",
         "httpStatus": 202
       }
     ],
@@ -1400,57 +989,120 @@
       {
         "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
         "kind": "docs",
-        "quote": "The Binance Spot API provides RESTful endpoints for market data, account information, and order execution. All endpoints require an API Key and a signature generated using HMAC SHA256. The API is publicly available and free to use with rate limits.",
-        "fetchedAt": "2026-11-23T12:45:38.041Z",
+        "quote": "All endpoints require an API Key and a signature generated using HMAC SHA256.",
+        "fetchedAt": "2026-11-23T13:01:55.728Z",
         "httpStatus": 202
       }
     ],
     "reason": "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
   },
   {
-    "id": 35,
-    "name": "Mailchimp",
+    "id": 61,
+    "name": "GitHub",
     "round": 2,
     "field": "authMethods",
     "before": [
+      "oauth2",
       "bearer_token",
-      "oauth2"
+      "jwt"
     ],
     "after": [
       "oauth2",
+      "api_key",
+      "bearer_token",
+      "jwt"
+    ],
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 2,
+    "field": "accessModel",
+    "before": "unknown",
+    "after": "self_serve_free",
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 2,
+    "field": "apiSurface",
+    "before": {
+      "type": "rest",
+      "breadth": "unknown",
+      "docsUrl": "https://docs.github.com/en/rest"
+    },
+    "after": {
+      "type": "rest",
+      "breadth": "wide",
+      "docsUrl": "https://docs.github.com/en/rest"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 2,
+    "field": "hasMcp",
+    "before": "official_mcp",
+    "after": "unknown",
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 2,
+    "field": "buildability",
+    "before": {
+      "verdict": "unknown"
+    },
+    "after": {
+      "verdict": "toolkit_ready"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "round": 2,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://docs.github.com/en/rest",
+        "kind": "docs",
+        "quote": "REST APIAPI Version: 2026-03-10 (latest)",
+        "fetchedAt": "2026-11-23T13:00:42.698Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://docs.github.com/en/rest",
+        "kind": "docs",
+        "quote": "REST API\nAPI Version: 2026-03-10 (latest)\nQuickstart\nAbout the REST API\nAbout the REST API\nComparing GitHub's APIs\nAPI Versions\nBreaking changes\nOpenAPI description\nUsing the REST API\nGetting started\nRate limits\nPagination\nLibraries\nBest practices\nTroubleshooting\nTimezones\nCORS and JSONPIssue event types\nGitHub event types\nAuthentication\nAuthenticating\nKeeping API credentials secure\nEndpoints for GitHub App installation tokens\nEndpoints for GitHub App user tokens\nEndpoints for fine-grained PATs\n",
+        "fetchedAt": "2026-11-23T13:01:49.066Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "round": 2,
+    "field": "authMethods",
+    "before": [
+      "unknown"
+    ],
+    "after": [
       "api_key"
     ],
     "reason": "grounding_miss:hasMcp=official_mcp"
   },
   {
-    "id": 35,
-    "name": "Mailchimp",
-    "round": 2,
-    "field": "accessModel",
-    "before": "self_serve_free",
-    "after": "self_serve_paid",
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 35,
-    "name": "Mailchimp",
-    "round": 2,
-    "field": "apiSurface",
-    "before": {
-      "type": "rest",
-      "breadth": "medium",
-      "docsUrl": "https://mailchimp.com/developer/marketing/api/root/list"
-    },
-    "after": {
-      "type": "rest",
-      "breadth": "wide",
-      "docsUrl": "https://mailchimp.com/developer/marketing/api/root/list"
-    },
-    "reason": "grounding_miss:hasMcp=official_mcp"
-  },
-  {
-    "id": 35,
-    "name": "Mailchimp",
+    "id": 51,
+    "name": "DataForSEO",
     "round": 2,
     "field": "hasMcp",
     "before": "official_mcp",
@@ -1458,38 +1110,123 @@
     "reason": "grounding_miss:hasMcp=official_mcp"
   },
   {
-    "id": 35,
-    "name": "Mailchimp",
+    "id": 51,
+    "name": "DataForSEO",
+    "round": 2,
+    "field": "buildability",
+    "before": {
+      "verdict": "needs_work",
+      "blocker": "Authentication method not explicitly documented in the fetched page."
+    },
+    "after": {
+      "verdict": "toolkit_ready"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
     "round": 2,
     "field": "evidenceUrls",
     "before": [
       {
-        "url": "https://mailchimp.com/developer/marketing/api/root/list",
+        "url": "https://docs.dataforseo.com/v3/",
         "kind": "docs",
-        "quote": "Authorization using a Mailchimp API key (a.k.a. Bearer token) OR Authorization using OAuth",
-        "fetchedAt": "2026-11-23T12:38:24.116Z",
+        "quote": "Authentication SERP API Overview",
+        "fetchedAt": "2026-11-23T13:00:37.975Z",
         "httpStatus": 200
       }
     ],
     "after": [
       {
-        "url": "https://mailchimp.com/developer/marketing/api/root/list",
+        "url": "https://docs.dataforseo.com/v3/",
         "kind": "docs",
-        "quote": "AuthorizationBearerAuthorization using a Mailchimp API key (a.k.a. Bearer token)ORAuthorizationBearerAuthorization using OAuth",
-        "fetchedAt": "2026-11-23T12:45:34.863Z",
+        "quote": "Authentication SERP API Overview Screenshot AI Summary Google Overview Locations Languages Organic Overview Task POST Tasks Ready Task GET Advanced Regular HTML Live Advanced Regular HTML",
+        "fetchedAt": "2026-11-23T13:01:48.625Z",
         "httpStatus": 200
       }
     ],
     "reason": "grounding_miss:hasMcp=official_mcp"
   },
   {
-    "id": 35,
-    "name": "Mailchimp",
+    "id": 51,
+    "name": "DataForSEO",
     "round": 2,
     "field": "confidence",
-    "before": "low",
+    "before": "medium",
     "after": "high",
     "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "round": 2,
+    "field": "apiSurface",
+    "before": {
+      "type": "rest",
+      "breadth": "wide",
+      "docsUrl": "https://developers.google.com/google-ads/api/docs/start"
+    },
+    "after": {
+      "type": "rest",
+      "breadth": "wide",
+      "docsUrl": "https://developers.google.com/google-ads/api/docs/get-started/introduction"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "round": 2,
+    "field": "buildability",
+    "before": {
+      "verdict": "needs_work",
+      "blocker": "Requires Google API Console project setup and developer token approval."
+    },
+    "after": {
+      "verdict": "toolkit_ready"
+    },
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "round": 2,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+        "kind": "docs",
+        "quote": "身份验证与授权 概览访问模型概览服务账号工作流程 用户身份验证工作流 概览单用户身份验证工作流多用户身份验证工作流安全性要求OAuth 2.0 内部结构设置 Google API 控制台项目以进行授权凭据管理多方审批",
+        "fetchedAt": "2026-11-23T12:27:17.384Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+        "kind": "docs",
+        "quote": "Google Ads MCP server",
+        "fetchedAt": "2026-11-23T13:01:48.623Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:hasMcp=official_mcp"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "round": 2,
+    "field": "authMethods",
+    "before": [
+      "api_key",
+      "oauth2"
+    ],
+    "after": [
+      "oauth2",
+      "api_key"
+    ],
+    "reason": "grounding_miss:auth=api_key"
   },
   {
     "id": 75,
@@ -1504,27 +1241,13 @@
     "id": 75,
     "name": "Asana",
     "round": 2,
-    "field": "buildability",
-    "before": {
-      "verdict": "toolkit_ready",
-      "blocker": ""
-    },
-    "after": {
-      "verdict": "toolkit_ready"
-    },
-    "reason": "grounding_miss:auth=api_key"
-  },
-  {
-    "id": 75,
-    "name": "Asana",
-    "round": 2,
     "field": "evidenceUrls",
     "before": [
       {
         "url": "https://developers.asana.com/docs/overview",
         "kind": "docs",
-        "quote": "What is an Asana app? An Asana app makes it possible to extend or enhance what’s possible with Asana.",
-        "fetchedAt": "2026-11-23T12:33:13.954Z",
+        "quote": "Authentication Personal access token OAuth OAuth Code Samples / Libraries OAuth scopes OpenID Connect ... MCP Server ...",
+        "fetchedAt": "2026-11-23T13:00:44.497Z",
         "httpStatus": 200
       }
     ],
@@ -1532,20 +1255,51 @@
       {
         "url": "https://developers.asana.com/docs/overview",
         "kind": "docs",
-        "quote": "An Asana app makes it possible to extend or enhance what’s possible with Asana. Many people build Asana apps to integrate with other tools, add or extract data about the Work Graph, or automate workflows.",
-        "fetchedAt": "2026-11-23T12:45:37.640Z",
+        "quote": "What is an Asana app? An Asana app makes it possible to extend or enhance what’s possible with Asana. Many people build Asana apps to integrate with other tools, add or extract data about the Work Graph, or automate workflows.",
+        "fetchedAt": "2026-11-23T13:01:49.974Z",
         "httpStatus": 200
       }
     ],
     "reason": "grounding_miss:auth=api_key"
   },
   {
-    "id": 75,
-    "name": "Asana",
+    "id": 33,
+    "name": "LinkedIn Ads",
     "round": 2,
-    "field": "confidence",
-    "before": "low",
-    "after": "high",
-    "reason": "grounding_miss:auth=api_key"
+    "field": "buildability",
+    "before": {
+      "verdict": "needs_work",
+      "blocker": "Requires LinkedIn Marketing Platform developer account approval and OAuth2 setup."
+    },
+    "after": {
+      "verdict": "needs_work",
+      "blocker": "Requires LinkedIn Marketing API Program approval and OAuth2 setup."
+    },
+    "reason": "grounding_miss:auth=oauth2"
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "round": 2,
+    "field": "evidenceUrls",
+    "before": [
+      {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+        "kind": "docs",
+        "quote": "The LinkedIn Marketing Platform helps businesses grow by building technology to reach, engage, and convert professional audiences at scale. The platform offers APIs to create LinkedIn marketing campaigns, to report campaign performance, to manage leads, and to grow a company Page.",
+        "fetchedAt": "2026-11-23T13:00:33.516Z",
+        "httpStatus": 200
+      }
+    ],
+    "after": [
+      {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+        "kind": "docs",
+        "quote": "The LinkedIn Marketing Platform helps businesses grow by building technology to reach, engage, and convert professional audiences at scale. The platform offers APIs to create LinkedIn marketing campaigns, to report campaign performance, to manage leads, and to grow a company Page.",
+        "fetchedAt": "2026-11-23T13:01:48.624Z",
+        "httpStatus": 200
+      }
+    ],
+    "reason": "grounding_miss:auth=oauth2"
   }
 ]

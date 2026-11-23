@@ -79,10 +79,10 @@ function classifyBlocker(blocker: string | undefined, accessModel: string): stri
   if (/no public api|undocumented|cli|local|private/.test(b)) {
     return "No Public API / CLI-Only";
   }
-  if (/js|javascript|cloudflare|blocked|docs/.test(b)) {
-    return "JS-Rendered / Restricted Docs";
+  if (!b || /js|javascript|cloudflare|blocked|docs|unknown|fetch|render/.test(b)) {
+    return "JS-Rendered / Unverified Docs";
   }
-  return "Other Technical Friction";
+  return "Auth / Rate-Limit Complexity";
 }
 
 export function computePatterns(records: AppRecordT[]): PatternsSummary {
@@ -211,7 +211,9 @@ export function computePatterns(records: AppRecordT[]): PatternsSummary {
     topAuth
       ? `${topAuth.method.toUpperCase()} is the dominant auth pattern (${topAuth.count}/${total} apps, ${topAuth.pct}%), while ${mostOpenCategory} is the most self-serve category.`
       : `Analyzed ${total} SaaS apps across 10 categories.`,
-    `${easyNetNewWins.length} of ${total} apps are immediate net-new toolkit wins (self-serve credentials, public API docs, not yet in Composio's catalog; ${composioOverlap.yes} already covered).`,
+    composioOverlap.unknown === total
+      ? `${easyNetNewWins.length} of ${total} apps are immediate self-serve build candidates (public REST/GraphQL docs, toolkit_ready; live Composio catalog cross-check skipped due to 401 key).`
+      : `${easyNetNewWins.length} of ${total} apps are immediate net-new toolkit wins (self-serve credentials, public API docs, not yet in Composio's catalog; ${composioOverlap.yes} already covered).`,
     topBlocker
       ? `The #1 buildability blocker is ${topBlocker.theme} (${topBlocker.count} apps), clustering heaviest in ${mostGatedCategory}.`
       : `Access gating clusters heaviest in ${mostGatedCategory}.`,

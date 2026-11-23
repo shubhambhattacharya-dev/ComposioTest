@@ -2,8 +2,8 @@
   {
     "round": 0,
     "total": 100,
-    "passed": 77,
-    "failed": 23,
+    "passed": 81,
+    "failed": 19,
     "verdicts": [
       {
         "id": 1,
@@ -28,18 +28,14 @@
       {
         "id": 2,
         "name": "HubSpot",
-        "ok": false,
-        "failures": [
-          "grounding_miss:auth=api_key"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:auth=api_key"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [
               "auth=oauth2:oauth"
             ],
@@ -50,19 +46,16 @@
       {
         "id": 3,
         "name": "Pipedrive",
-        "ok": false,
-        "failures": [
-          "grounding_miss:hasMcp=official_mcp"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://developers.pipedrive.com/docs/api/v1",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:hasMcp=official_mcp"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [
+              "auth=oauth2:oauth",
               "auth=api_key:api token"
             ],
             "jsShellDetected": false
@@ -127,18 +120,14 @@
       {
         "id": 7,
         "name": "Zoho CRM",
-        "ok": false,
-        "failures": [
-          "grounding_miss:auth=oauth2"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://www.zoho.com/crm/developer/docs/api/v6/",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:auth=oauth2"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [],
             "jsShellDetected": false
           }
@@ -206,7 +195,7 @@
         "name": "Zendesk",
         "ok": false,
         "failures": [
-          "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
+          "grounding_miss:auth=oauth2,auth=api_key,auth=basic"
         ],
         "urlVerdicts": [
           {
@@ -214,7 +203,7 @@
             "httpStatus": 200,
             "ok": false,
             "failures": [
-              "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
+              "grounding_miss:auth=oauth2,auth=api_key,auth=basic"
             ],
             "groundedKeywords": [],
             "jsShellDetected": false
@@ -438,7 +427,7 @@
         "name": "Lark (Larksuite)",
         "ok": false,
         "failures": [
-          "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
+          "js_shell_ungrounded:auth=oauth2"
         ],
         "urlVerdicts": [
           {
@@ -446,7 +435,7 @@
             "httpStatus": 200,
             "ok": false,
             "failures": [
-              "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
+              "js_shell_ungrounded:auth=oauth2"
             ],
             "groundedKeywords": [],
             "jsShellDetected": true
@@ -495,21 +484,15 @@
       {
         "id": 27,
         "name": "Telegram",
-        "ok": false,
-        "failures": [
-          "grounding_miss:hasMcp=official_mcp"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://core.telegram.org/bots/api",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:hasMcp=official_mcp"
-            ],
-            "groundedKeywords": [
-              "auth=api_key:key"
-            ],
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
             "jsShellDetected": false
           }
         ]
@@ -517,19 +500,17 @@
       {
         "id": 28,
         "name": "WhatsApp Business",
-        "ok": false,
-        "failures": [
-          "grounding_miss:hasMcp=official_mcp"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:hasMcp=official_mcp"
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token"
             ],
-            "groundedKeywords": [],
             "jsShellDetected": false
           }
         ]
@@ -576,7 +557,7 @@
         "failures": [],
         "urlVerdicts": [
           {
-            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction?hl=zh-cn",
+            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
             "httpStatus": 200,
             "ok": true,
             "failures": [],
@@ -611,7 +592,7 @@
         "name": "LinkedIn Ads",
         "ok": false,
         "failures": [
-          "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+          "grounding_miss:auth=oauth2"
         ],
         "urlVerdicts": [
           {
@@ -619,7 +600,7 @@
             "httpStatus": 200,
             "ok": false,
             "failures": [
-              "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+              "grounding_miss:auth=oauth2"
             ],
             "groundedKeywords": [],
             "jsShellDetected": false
@@ -645,20 +626,17 @@
       {
         "id": 35,
         "name": "Mailchimp",
-        "ok": false,
-        "failures": [
-          "grounding_miss:hasMcp=official_mcp"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://mailchimp.com/developer/marketing/api/root/list",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:hasMcp=official_mcp"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [
-              "auth=oauth2:oauth"
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
             ],
             "jsShellDetected": false
           }
@@ -720,18 +698,14 @@
       {
         "id": 39,
         "name": "Threads (Meta)",
-        "ok": false,
-        "failures": [
-          "grounding_miss:auth=oauth2"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://developers.facebook.com/documentation/threads",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:auth=oauth2"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [],
             "jsShellDetected": false
           }
@@ -756,15 +730,23 @@
       {
         "id": 41,
         "name": "Shopify",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=api_key"
+        ],
         "urlVerdicts": [
           {
             "url": "https://shopify.dev/docs/api",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
-            "groundedKeywords": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=api_key"
+            ],
+            "groundedKeywords": [
+              "auth=oauth2:token",
+              "apiSurface=graphql:graphql",
+              "hasMcp=official_mcp:mcp"
+            ],
             "jsShellDetected": false
           }
         ]
@@ -929,14 +911,18 @@
       {
         "id": 51,
         "name": "DataForSEO",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=basic,hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
             "url": "https://docs.dataforseo.com/v3/",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=basic,hasMcp=official_mcp"
+            ],
             "groundedKeywords": [],
             "jsShellDetected": false
           }
@@ -1105,14 +1091,18 @@
       {
         "id": 61,
         "name": "GitHub",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
             "url": "https://docs.github.com/en/rest",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
             "groundedKeywords": [
               "auth=oauth2:oauth"
             ],
@@ -1288,6 +1278,7 @@
             "ok": true,
             "failures": [],
             "groundedKeywords": [
+              "auth=oauth2:oauth",
               "hasMcp=official_mcp:mcp"
             ],
             "jsShellDetected": false
@@ -1299,7 +1290,7 @@
         "name": "Airtable",
         "ok": false,
         "failures": [
-          "grounding_miss:auth=api_key"
+          "grounding_miss:auth=oauth2"
         ],
         "urlVerdicts": [
           {
@@ -1307,7 +1298,7 @@
             "httpStatus": 200,
             "ok": false,
             "failures": [
-              "grounding_miss:auth=api_key"
+              "grounding_miss:auth=oauth2"
             ],
             "groundedKeywords": [],
             "jsShellDetected": false
@@ -1433,18 +1424,14 @@
       {
         "id": 79,
         "name": "Smartsheet",
-        "ok": false,
-        "failures": [
-          "grounding_miss:auth=oauth2"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://smartsheet.redoc.ly/",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:auth=oauth2"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [
               "auth=basic:basic"
             ],
@@ -1471,14 +1458,18 @@
       {
         "id": 81,
         "name": "Stripe",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
             "url": "https://docs.stripe.com/api",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
             "groundedKeywords": [
               "auth=oauth2:oauth",
               "auth=api_key:api key"
@@ -1580,18 +1571,14 @@
       {
         "id": 87,
         "name": "Xero",
-        "ok": false,
-        "failures": [
-          "grounding_miss:auth=oauth2"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://developer.xero.com/documentation/api/accounting/overview",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:auth=oauth2"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [],
             "jsShellDetected": false
           }
@@ -1676,14 +1663,18 @@
       {
         "id": 92,
         "name": "Otter AI",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
             "url": "https://help.otter.ai/hc/en-us",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+            ],
             "groundedKeywords": [],
             "jsShellDetected": false
           }
@@ -1836,8 +1827,8 @@
   {
     "round": 1,
     "total": 100,
-    "passed": 86,
-    "failed": 14,
+    "passed": 85,
+    "failed": 15,
     "verdicts": [
       {
         "id": 1,
@@ -1876,18 +1867,14 @@
       {
         "id": 3,
         "name": "Pipedrive",
-        "ok": false,
-        "failures": [
-          "grounding_miss:hasMcp=official_mcp"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://developers.pipedrive.com/docs/api/v1",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:hasMcp=official_mcp"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [
               "auth=oauth2:oauth",
               "auth=api_key:api token"
@@ -2314,18 +2301,14 @@
       {
         "id": 27,
         "name": "Telegram",
-        "ok": false,
-        "failures": [
-          "grounding_miss:hasMcp=official_mcp"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://core.telegram.org/bots/api",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:hasMcp=official_mcp"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [],
             "jsShellDetected": false
           }
@@ -2387,17 +2370,20 @@
       {
         "id": 31,
         "name": "Google Ads",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
-            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction?hl=zh-cn",
+            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
             "groundedKeywords": [
-              "auth=oauth2:oauth",
-              "hasMcp=official_mcp:mcp"
+              "auth=oauth2:oauth"
             ],
             "jsShellDetected": false
           }
@@ -2426,7 +2412,7 @@
         "name": "LinkedIn Ads",
         "ok": false,
         "failures": [
-          "grounding_miss:hasMcp=official_mcp"
+          "grounding_miss:auth=oauth2"
         ],
         "urlVerdicts": [
           {
@@ -2434,7 +2420,7 @@
             "httpStatus": 200,
             "ok": false,
             "failures": [
-              "grounding_miss:hasMcp=official_mcp"
+              "grounding_miss:auth=oauth2"
             ],
             "groundedKeywords": [],
             "jsShellDetected": false
@@ -2460,20 +2446,17 @@
       {
         "id": 35,
         "name": "Mailchimp",
-        "ok": false,
-        "failures": [
-          "grounding_miss:hasMcp=official_mcp"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://mailchimp.com/developer/marketing/api/root/list",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "grounding_miss:hasMcp=official_mcp"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [
-              "auth=oauth2:oauth"
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
             ],
             "jsShellDetected": false
           }
@@ -2575,7 +2558,10 @@
             "httpStatus": 200,
             "ok": true,
             "failures": [],
-            "groundedKeywords": [],
+            "groundedKeywords": [
+              "auth=oauth2:token",
+              "hasMcp=official_mcp:mcp"
+            ],
             "jsShellDetected": false
           }
         ]
@@ -2740,14 +2726,18 @@
       {
         "id": 51,
         "name": "DataForSEO",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
             "url": "https://docs.dataforseo.com/v3/",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
             "groundedKeywords": [],
             "jsShellDetected": false
           }
@@ -2916,14 +2906,18 @@
       {
         "id": 61,
         "name": "GitHub",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
             "url": "https://docs.github.com/en/rest",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
             "groundedKeywords": [
               "auth=oauth2:oauth"
             ],
@@ -3099,6 +3093,7 @@
             "ok": true,
             "failures": [],
             "groundedKeywords": [
+              "auth=oauth2:oauth",
               "hasMcp=official_mcp:mcp"
             ],
             "jsShellDetected": false
@@ -3274,14 +3269,18 @@
       {
         "id": 81,
         "name": "Stripe",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
             "url": "https://docs.stripe.com/api",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
             "groundedKeywords": [
               "auth=oauth2:oauth",
               "auth=api_key:api key"
@@ -3635,8 +3634,8 @@
   {
     "round": 2,
     "total": 100,
-    "passed": 88,
-    "failed": 12,
+    "passed": 89,
+    "failed": 11,
     "verdicts": [
       {
         "id": 1,
@@ -4050,18 +4049,14 @@
       {
         "id": 24,
         "name": "Lark (Larksuite)",
-        "ok": false,
-        "failures": [
-          "js_shell_ungrounded:auth=oauth2"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://open.larksuite.com/document/home/index",
             "httpStatus": 200,
-            "ok": false,
-            "failures": [
-              "js_shell_ungrounded:auth=oauth2"
-            ],
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [],
             "jsShellDetected": true
           }
@@ -4182,13 +4177,13 @@
         "failures": [],
         "urlVerdicts": [
           {
-            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction?hl=zh-cn",
+            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
             "httpStatus": 200,
             "ok": true,
             "failures": [],
             "groundedKeywords": [
               "auth=oauth2:oauth",
-              "hasMcp=official_mcp:mcp"
+              "hasMcp=official_mcp:mcp server"
             ],
             "jsShellDetected": false
           }
@@ -4363,7 +4358,10 @@
             "httpStatus": 200,
             "ok": true,
             "failures": [],
-            "groundedKeywords": [],
+            "groundedKeywords": [
+              "auth=oauth2:token",
+              "hasMcp=official_mcp:mcp"
+            ],
             "jsShellDetected": false
           }
         ]
@@ -4536,7 +4534,9 @@
             "httpStatus": 200,
             "ok": true,
             "failures": [],
-            "groundedKeywords": [],
+            "groundedKeywords": [
+              "auth=api_key:key"
+            ],
             "jsShellDetected": false
           }
         ]
@@ -4713,7 +4713,8 @@
             "ok": true,
             "failures": [],
             "groundedKeywords": [
-              "auth=oauth2:oauth"
+              "auth=oauth2:oauth",
+              "auth=api_key:key"
             ],
             "jsShellDetected": false
           }
@@ -4887,6 +4888,7 @@
             "ok": true,
             "failures": [],
             "groundedKeywords": [
+              "auth=oauth2:oauth",
               "hasMcp=official_mcp:mcp"
             ],
             "jsShellDetected": false
@@ -5062,18 +5064,19 @@
       {
         "id": 81,
         "name": "Stripe",
-        "ok": true,
-        "failures": [],
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
         "urlVerdicts": [
           {
             "url": "https://docs.stripe.com/api",
             "httpStatus": 200,
-            "ok": true,
-            "failures": [],
-            "groundedKeywords": [
-              "auth=oauth2:oauth",
-              "auth=api_key:api key"
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
             ],
+            "groundedKeywords": [],
             "jsShellDetected": false
           }
         ]
@@ -5139,20 +5142,16 @@
       {
         "id": 85,
         "name": "iPayX",
-        "ok": false,
-        "failures": [
-          "http_500:https://www.ipayx.ai/docs"
-        ],
+        "ok": true,
+        "failures": [],
         "urlVerdicts": [
           {
             "url": "https://www.ipayx.ai/docs",
-            "httpStatus": 500,
-            "ok": false,
-            "failures": [
-              "http_500:https://www.ipayx.ai/docs"
-            ],
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
             "groundedKeywords": [],
-            "jsShellDetected": false
+            "jsShellDetected": true
           }
         ]
       },
@@ -5229,15 +5228,15 @@
         "name": "PitchBook",
         "ok": false,
         "failures": [
-          "http_404:https://pitchbook.com/products/direct-data"
+          "http_403:https://pitchbook.com/products/direct-data"
         ],
         "urlVerdicts": [
           {
             "url": "https://pitchbook.com/products/direct-data",
-            "httpStatus": 404,
+            "httpStatus": 403,
             "ok": false,
             "failures": [
-              "http_404:https://pitchbook.com/products/direct-data"
+              "http_403:https://pitchbook.com/products/direct-data"
             ],
             "groundedKeywords": [],
             "jsShellDetected": false

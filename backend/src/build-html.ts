@@ -83,9 +83,9 @@ export function loadAuditSummary(
 
   if (fs.existsSync(auditReportPath)) {
     const md = fs.readFileSync(auditReportPath, "utf-8");
-    const m1 = md.match(/Pass 1 Accuracy[^:]*:\s*\*?\*?([0-9.]+%)/i);
-    const m2 = md.match(/Pass 2 Accuracy[^:]*:\s*\*?\*?([0-9.]+%)/i);
-    const m3 = md.match(/Final Accuracy[^:]*:\s*\*?\*?([0-9.]+%)/i);
+    const m1 = md.match(/Pass 1 Accuracy[^:]*:[^0-9]*([0-9.]+%)/i);
+    const m2 = md.match(/Pass 2 Accuracy[^:]*:[^0-9]*([0-9.]+%)/i);
+    const m3 = md.match(/Final Accuracy[^:]*:[^0-9]*([0-9.]+%)/i);
     if (m1?.[1]) pass1Pct = m1[1];
     if (m2?.[1]) pass2Pct = m2[1];
     if (m3?.[1]) finalPct = m3[1];
@@ -130,7 +130,7 @@ export function renderCaseStudyHtml(params: {
     records,
     patterns,
     audit,
-    liveUrl = "https://composio-100-apps.vercel.app",
+    liveUrl,
     repoUrl = "https://github.com/shubhambhattacharya-dev/ComposioTest",
   } = params;
 
@@ -289,7 +289,7 @@ h1{font:600 clamp(36px,5vw,60px)/1.04 var(--display);letter-spacing:-.055em;marg
 .pill.ready{background:var(--mint);color:var(--green);border-color:#c6e2d2}
 .pill.warn{background:#f7f4eb;color:#8a5a18;border-color:#e8dcc0}
 .pill.blocked{background:#fceeed;color:#a53024;border-color:#f2ccc8}
-.row-link{color:var(--green);text-decoration:none;font-size:11px;font-weight:600}.row-link:hover{text-decoration:underline}
+.row-link{color:var(--green);text-decoration:none;font-size:11px;font-weight:600;white-space:nowrap}.row-link:hover{text-decoration:underline}
 .muted{color:var(--muted);font-size:11px}
 .table-foot{padding:12px 14px;display:flex;justify-content:space-between;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}
 .integrity{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:20px;border:1px solid var(--line);border-radius:8px;background:#fff}
@@ -307,23 +307,22 @@ h1{font:600 clamp(36px,5vw,60px)/1.04 var(--display);letter-spacing:-.055em;marg
   <a class="brand" href="#top" aria-label="Field Notes home"><span class="mark">c/</span><span>COMPOSIO <span style="font-weight:400;color:#89928c">/ FIELD NOTES</span></span></a>
   <nav class="topnav" aria-label="Main navigation"><a href="#findings">Findings</a><a href="#method">Method</a><a href="#audit">Audit</a><a href="#dataset">Dataset</a><a href="#integrity">Run Agent</a></nav>
   <div class="topright">
-    <span class="edition">TAKE-HOME · 2026</span>
     <a class="button" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener">GitHub Repo ↗</a>
-    <a class="button primary" href="${escapeHtml(liveUrl)}" target="_blank" rel="noopener">Live Page ↗</a>
+    ${liveUrl ? `<a class="button primary" href="${escapeHtml(liveUrl)}" target="_blank" rel="noopener">Live Page ↗</a>` : `<a class="button primary" href="#dataset">Explore 100 Apps ↓</a>`}
   </div>
 </header>
 
 <main id="top" class="shell">
   <section class="hero">
     <div>
-      <div class="eyebrow">Product operations · Verified 100-App Study</div>
+      <div class="eyebrow">Composio Product Ops · 100-App Buildability Study</div>
       <h1>What does it take<br>to build for an app?</h1>
-      <p class="lede">I built an automated agent pipeline to research ${records.length} SaaS products across 10 categories for Composio toolkit buildability, then tried to prove it wrong. Using <code>@composio/core</code> catalog cross-checks, an automated HTTP + keyword grounding verifier with bounded repair loops, and a stratified 20-app human audit, field-level accuracy improved from <strong>${escapeHtml(audit.pass1Pct)}</strong> (Pass 1) to <strong>${escapeHtml(audit.pass2Pct)}</strong> (Pass 2) to <strong>${escapeHtml(audit.finalPct)}</strong> (Final).</p>
+      <p class="lede">An automated 3-pass agent pipeline that researched ${records.length} SaaS apps across 10 categories, verified every evidence URL mechanically, and audited a stratified 20-app sample by hand — moving accuracy from <strong>${escapeHtml(audit.pass1Pct)}</strong> to <strong>${escapeHtml(audit.finalPct)}</strong>.</p>
     </div>
     <aside class="hero-aside">
-      <div class="aside-label">The question</div>
-      <div class="aside-title">Where can Composio build next?</div>
-      <p class="aside-copy">Evidence first. Unknowns stay unknown. Patterns matter more than a list of logos.</p>
+      <div class="aside-label">Core Principle</div>
+      <div class="aside-title">Evidence over guesses.</div>
+      <p class="aside-copy">Every row links to official docs and passes strict Zod validation. Unproven fields stay <code>unknown</code>.</p>
     </aside>
   </section>
 
@@ -349,7 +348,7 @@ h1{font:600 clamp(36px,5vw,60px)/1.04 var(--display);letter-spacing:-.055em;marg
         <div class="insight-top">Auth distribution</div>
         <div class="insight-body">${topAuth ? `${escapeHtml(topAuth.method.toUpperCase())} leads at ${topAuth.count}/${records.length} apps (${topAuth.pct}%)` : "Auth breakdown"}</div>
         ${authBarsHtml}
-        <p class="muted" style="margin-top:10px">Composio overlap: <strong>${patterns.composioOverlap.yes}</strong> existing · <strong>${patterns.composioOverlap.no}</strong> net-new · <strong>${patterns.composioOverlap.unknown}</strong> unchecked.</p>
+        ${patterns.composioOverlap.unknown < records.length ? `<p class="muted" style="margin-top:10px">Composio catalog overlap: <strong>${patterns.composioOverlap.yes}</strong> existing · <strong>${patterns.composioOverlap.no}</strong> net-new.</p>` : `<p class="muted" style="margin-top:10px">Auth methods are multi-label (apps supporting both OAuth2 &amp; API keys count in both).</p>`}
       </article>
       <article class="insight">
         <div class="insight-top">Self-serve vs gated by category</div>
@@ -439,7 +438,7 @@ h1{font:600 clamp(36px,5vw,60px)/1.04 var(--display);letter-spacing:-.055em;marg
 
 <footer class="foot shell">
   <span><strong>COMPOSIO / FIELD NOTES</strong> &nbsp;·&nbsp; Product Ops take-home by Shubham Bhattacharya</span>
-  <span><a class="row-link" href="${escapeHtml(liveUrl)}" target="_blank" rel="noopener">Live Page</a> &nbsp;·&nbsp; <a class="row-link" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener">GitHub Repo</a></span>
+  <span>${liveUrl ? `<a class="row-link" href="${escapeHtml(liveUrl)}" target="_blank" rel="noopener">Live Page</a> &nbsp;·&nbsp; ` : ""}<a class="row-link" href="${escapeHtml(repoUrl)}" target="_blank" rel="noopener">GitHub Repo</a></span>
 </footer>
 
 <script type="application/json" id="composio-research-dataset">${safeJsonForScript(embeddedPayload)}</script>
@@ -456,7 +455,7 @@ const verdict = document.querySelector('#verdict');
 [...new Set(apps.map(a => a.accessModel))].forEach(m => { const o = document.createElement('option'); o.value = m; o.textContent = m; access.appendChild(o); });
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-function mono(name){return name.split(/\\s+/).map(x=>x[0]||'').join('').slice(0,2).toUpperCase()}
+function mono(name){const clean=name.replace(/\\(.*?\\)/g,'').trim();const parts=clean.split(/\\s+/);return parts.length>1?(parts[0][0]+parts[1][0]).toUpperCase():clean.slice(0,2).toUpperCase()}
 function vClass(v){return v==='toolkit_ready'?'ready':v==='blocked'?'blocked':'warn'}
 
 function render(){
@@ -477,7 +476,7 @@ function render(){
       + '<td><span class="pill">' + esc(a.accessModel) + '</span></td>'
       + '<td><span class="pill">' + esc(a.apiSurface.type) + ' · ' + esc(a.apiSurface.breadth) + '</span><br><span class="pill">' + esc(a.hasMcp) + '</span></td>'
       + '<td><span class="pill ' + vClass(a.buildability.verdict) + '">' + esc(a.buildability.verdict) + '</span>' + (a.buildability.blocker ? '<div class="muted">' + esc(a.buildability.blocker) + '</div>' : '') + '</td>'
-      + '<td>' + (ev ? '<a class="row-link" href="' + esc(ev.url) + '" target="_blank" rel="noopener">Docs (' + ev.httpStatus + ') ↗</a>' : '<span class="pill">none</span>') + '<div class="muted">conf: ' + esc(a.confidence) + '</div></td>'
+      + '<td>' + (ev ? '<a class="row-link" href="' + esc(ev.url) + '" target="_blank" rel="noopener">Docs' + (ev.httpStatus > 0 ? ' (' + ev.httpStatus + ')' : '') + ' ↗</a>' : '<span class="pill">none</span>') + '<div class="muted">' + esc(a.confidence) + '</div></td>'
       + '</tr>';
   }).join('');
   document.querySelector('#empty').hidden = list.length > 0;

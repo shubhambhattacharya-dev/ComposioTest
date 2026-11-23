@@ -1,163 +1,483 @@
 {
-  "generatedAt": "2026-11-23T12:14:11.985Z",
-  "totalApps": 2,
+  "generatedAt": "2026-11-23T13:03:51.982Z",
+  "totalApps": 100,
   "authDistribution": [
     {
+      "method": "unknown",
+      "count": 41,
+      "pct": 41
+    },
+    {
       "method": "oauth2",
+      "count": 33,
+      "pct": 33
+    },
+    {
+      "method": "api_key",
+      "count": 30,
+      "pct": 30
+    },
+    {
+      "method": "bearer_token",
+      "count": 12,
+      "pct": 12
+    },
+    {
+      "method": "basic",
+      "count": 5,
+      "pct": 5
+    },
+    {
+      "method": "none",
+      "count": 2,
+      "pct": 2
+    },
+    {
+      "method": "oauth1",
       "count": 1,
-      "pct": 50
+      "pct": 1
     },
     {
       "method": "jwt",
       "count": 1,
-      "pct": 50
+      "pct": 1
     },
     {
-      "method": "api_key",
+      "method": "other",
       "count": 1,
-      "pct": 50
+      "pct": 1
+    },
+    {
+      "method": "hmac",
+      "count": 1,
+      "pct": 1
     }
   ],
   "accessDistribution": [
     {
-      "model": "self_serve_trial",
-      "count": 1,
-      "pct": 50
+      "model": "unknown",
+      "count": 55,
+      "pct": 55
     },
     {
       "model": "self_serve_free",
-      "count": 1,
-      "pct": 50
+      "count": 22,
+      "pct": 22
+    },
+    {
+      "model": "self_serve_paid",
+      "count": 8,
+      "pct": 8
+    },
+    {
+      "model": "admin_approval",
+      "count": 5,
+      "pct": 5
+    },
+    {
+      "model": "open_source",
+      "count": 4,
+      "pct": 4
+    },
+    {
+      "model": "self_serve_trial",
+      "count": 3,
+      "pct": 3
+    },
+    {
+      "model": "partner_or_sales",
+      "count": 3,
+      "pct": 3
     }
   ],
   "selfServeByCategory": [
     {
       "category": "CRM and Sales",
-      "total": 2,
+      "total": 10,
       "selfServe": 2,
       "gated": 0,
-      "unknown": 0,
-      "selfServePct": 100
+      "unknown": 8,
+      "selfServePct": 20
     },
     {
       "category": "Support and Helpdesk",
-      "total": 0,
-      "selfServe": 0,
-      "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "total": 10,
+      "selfServe": 3,
+      "gated": 1,
+      "unknown": 6,
+      "selfServePct": 30
     },
     {
       "category": "Comms and Messaging",
-      "total": 0,
-      "selfServe": 0,
-      "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "total": 10,
+      "selfServe": 3,
+      "gated": 1,
+      "unknown": 6,
+      "selfServePct": 30
     },
     {
       "category": "Marketing and Ads",
-      "total": 0,
-      "selfServe": 0,
-      "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "total": 10,
+      "selfServe": 1,
+      "gated": 4,
+      "unknown": 5,
+      "selfServePct": 10
     },
     {
       "category": "Ecommerce",
-      "total": 0,
-      "selfServe": 0,
-      "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "total": 10,
+      "selfServe": 4,
+      "gated": 1,
+      "unknown": 5,
+      "selfServePct": 40
     },
     {
       "category": "Data SEO and Scraping",
-      "total": 0,
-      "selfServe": 0,
-      "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "total": 10,
+      "selfServe": 3,
+      "gated": 5,
+      "unknown": 2,
+      "selfServePct": 30
     },
     {
       "category": "Dev Infra and Data",
-      "total": 0,
-      "selfServe": 0,
-      "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "total": 10,
+      "selfServe": 4,
+      "gated": 1,
+      "unknown": 5,
+      "selfServePct": 40
     },
     {
       "category": "Productivity and PM",
-      "total": 0,
-      "selfServe": 0,
+      "total": 10,
+      "selfServe": 5,
       "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "unknown": 5,
+      "selfServePct": 50
     },
     {
       "category": "Finance and Fintech",
-      "total": 0,
-      "selfServe": 0,
-      "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "total": 10,
+      "selfServe": 2,
+      "gated": 1,
+      "unknown": 7,
+      "selfServePct": 20
     },
     {
       "category": "AI Research and Media",
-      "total": 0,
-      "selfServe": 0,
-      "gated": 0,
-      "unknown": 0,
-      "selfServePct": 0
+      "total": 10,
+      "selfServe": 2,
+      "gated": 2,
+      "unknown": 6,
+      "selfServePct": 20
     }
   ],
-  "mostGatedCategory": "CRM and Sales",
-  "mostOpenCategory": "CRM and Sales",
+  "mostGatedCategory": "Data SEO and Scraping",
+  "mostOpenCategory": "Productivity and PM",
   "mcpReadiness": {
-    "official_mcp": 2,
+    "official_mcp": 23,
     "community_mcp": 0,
-    "sdk_only": 0,
-    "none_found": 0,
-    "unknown": 0,
+    "sdk_only": 1,
+    "none_found": 27,
+    "unknown": 49,
     "officialApps": [
-      "Salesforce",
-      "Pipedrive"
+      "Attio",
+      "Close",
+      "DealCloud",
+      "Slack",
+      "Google Ads",
+      "Shopify",
+      "BigCommerce",
+      "Squarespace",
+      "SE Ranking",
+      "MrScraper",
+      "Firecrawl",
+      "Bright Data",
+      "Vercel",
+      "Notion",
+      "Asana",
+      "Monday.com",
+      "Coda",
+      "Stripe",
+      "Plaid",
+      "Reducto",
+      "Devin",
+      "higgsfield",
+      "YouTube Transcript"
     ]
   },
   "composioOverlap": {
     "yes": 0,
     "no": 0,
-    "unknown": 2
+    "unknown": 100
   },
   "buildabilityDistribution": {
-    "toolkit_ready": 2,
-    "needs_work": 0,
+    "toolkit_ready": 54,
+    "needs_work": 6,
     "blocked": 0,
-    "unknown": 0
+    "unknown": 40
   },
-  "topBlockers": [],
-  "easyNetNewWins": [
+  "topBlockers": [
     {
-      "id": 1,
-      "name": "Salesforce",
-      "category": "CRM and Sales",
-      "auth": "oauth2, jwt",
-      "docsUrl": "https://developer.salesforce.com/docs"
+      "theme": "JS-Rendered / Unverified Docs",
+      "count": 38
     },
     {
-      "id": 3,
-      "name": "Pipedrive",
-      "category": "CRM and Sales",
-      "auth": "api_key",
-      "docsUrl": "https://developers.pipedrive.com/docs/api/v1"
+      "theme": "App Review / Admin Approval",
+      "count": 4
+    },
+    {
+      "theme": "Partner / Contact-Sales Gating",
+      "count": 2
+    },
+    {
+      "theme": "Paid Plan Required for API",
+      "count": 1
+    },
+    {
+      "theme": "Auth / Rate-Limit Complexity",
+      "count": 1
     }
   ],
-  "outreachRequired": [],
+  "easyNetNewWins": [
+    {
+      "id": 2,
+      "name": "HubSpot",
+      "category": "CRM and Sales",
+      "auth": "oauth2",
+      "docsUrl": "https://developers.hubspot.com/docs/api-reference/latest/overview"
+    },
+    {
+      "id": 5,
+      "name": "Twenty",
+      "category": "CRM and Sales",
+      "auth": "oauth2",
+      "docsUrl": "https://docs.twenty.com/developers/introduction"
+    },
+    {
+      "id": 11,
+      "name": "Zendesk",
+      "category": "Support and Helpdesk",
+      "auth": "unknown",
+      "docsUrl": "https://developer.zendesk.com/api-reference/"
+    },
+    {
+      "id": 12,
+      "name": "Intercom",
+      "category": "Support and Helpdesk",
+      "auth": "oauth2",
+      "docsUrl": "https://developers.intercom.com/docs"
+    },
+    {
+      "id": 13,
+      "name": "Freshdesk",
+      "category": "Support and Helpdesk",
+      "auth": "api_key",
+      "docsUrl": "https://developers.freshdesk.com/api/"
+    },
+    {
+      "id": 21,
+      "name": "Slack",
+      "category": "Comms and Messaging",
+      "auth": "oauth2",
+      "docsUrl": "https://docs.slack.dev/"
+    },
+    {
+      "id": 22,
+      "name": "Twilio",
+      "category": "Comms and Messaging",
+      "auth": "basic, api_key",
+      "docsUrl": "https://www.twilio.com/docs/usage/api"
+    },
+    {
+      "id": 26,
+      "name": "Discord",
+      "category": "Comms and Messaging",
+      "auth": "oauth2, api_key",
+      "docsUrl": "https://docs.discord.com/developers/intro"
+    },
+    {
+      "id": 38,
+      "name": "Pinterest",
+      "category": "Marketing and Ads",
+      "auth": "oauth2",
+      "docsUrl": "https://developers.pinterest.com/docs/getting-started/connect-app/"
+    },
+    {
+      "id": 41,
+      "name": "Shopify",
+      "category": "Ecommerce",
+      "auth": "oauth2, bearer_token",
+      "docsUrl": "https://shopify.dev/docs/admin-api/rest/reference"
+    },
+    {
+      "id": 42,
+      "name": "WooCommerce",
+      "category": "Ecommerce",
+      "auth": "api_key, basic, oauth1",
+      "docsUrl": "https://woocommerce.github.io/woocommerce-rest-api-docs/"
+    },
+    {
+      "id": 43,
+      "name": "BigCommerce",
+      "category": "Ecommerce",
+      "auth": "oauth2, api_key",
+      "docsUrl": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/management/abandoned-carts"
+    },
+    {
+      "id": 48,
+      "name": "Gumroad",
+      "category": "Ecommerce",
+      "auth": "bearer_token",
+      "docsUrl": "https://gumroad.com/api"
+    },
+    {
+      "id": 56,
+      "name": "Firecrawl",
+      "category": "Data SEO and Scraping",
+      "auth": "api_key",
+      "docsUrl": "https://docs.firecrawl.dev/introduction"
+    },
+    {
+      "id": 57,
+      "name": "Bright Data",
+      "category": "Data SEO and Scraping",
+      "auth": "api_key",
+      "docsUrl": "https://docs.brightdata.com/introduction"
+    },
+    {
+      "id": 61,
+      "name": "GitHub",
+      "category": "Dev Infra and Data",
+      "auth": "oauth2, api_key, bearer_token, jwt",
+      "docsUrl": "https://docs.github.com/en/rest"
+    },
+    {
+      "id": 62,
+      "name": "Vercel",
+      "category": "Dev Infra and Data",
+      "auth": "bearer_token",
+      "docsUrl": "https://vercel.com/docs/rest-api"
+    },
+    {
+      "id": 64,
+      "name": "Cloudflare",
+      "category": "Dev Infra and Data",
+      "auth": "api_key, bearer_token",
+      "docsUrl": "https://developers.cloudflare.com/api/"
+    },
+    {
+      "id": 71,
+      "name": "Notion",
+      "category": "Productivity and PM",
+      "auth": "oauth2, bearer_token",
+      "docsUrl": "https://developers.notion.com/reference/intro"
+    },
+    {
+      "id": 74,
+      "name": "Jira",
+      "category": "Productivity and PM",
+      "auth": "oauth2, basic, bearer_token",
+      "docsUrl": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/"
+    },
+    {
+      "id": 75,
+      "name": "Asana",
+      "category": "Productivity and PM",
+      "auth": "oauth2, api_key",
+      "docsUrl": "https://developers.asana.com/docs/overview"
+    },
+    {
+      "id": 76,
+      "name": "Monday.com",
+      "category": "Productivity and PM",
+      "auth": "api_key",
+      "docsUrl": "https://developer.monday.com/api-reference/docs/introduction-to-graphql"
+    },
+    {
+      "id": 77,
+      "name": "ClickUp",
+      "category": "Productivity and PM",
+      "auth": "bearer_token",
+      "docsUrl": "https://clickup.com/api"
+    },
+    {
+      "id": 82,
+      "name": "Plaid",
+      "category": "Finance and Fintech",
+      "auth": "oauth2, api_key",
+      "docsUrl": "https://plaid.com/docs/api/"
+    },
+    {
+      "id": 99,
+      "name": "YouTube Transcript",
+      "category": "AI Research and Media",
+      "auth": "api_key, bearer_token",
+      "docsUrl": "https://transcriptapi.com/"
+    }
+  ],
+  "outreachRequired": [
+    {
+      "id": 28,
+      "name": "WhatsApp Business",
+      "category": "Comms and Messaging",
+      "accessModel": "admin_approval",
+      "blocker": "Requires Meta Business Manager approval and verified business account."
+    },
+    {
+      "id": 31,
+      "name": "Google Ads",
+      "category": "Marketing and Ads",
+      "accessModel": "admin_approval",
+      "blocker": "admin_approval"
+    },
+    {
+      "id": 32,
+      "name": "Meta Ads",
+      "category": "Marketing and Ads",
+      "accessModel": "admin_approval",
+      "blocker": "Requires Meta App Review and business verification for Ads Management"
+    },
+    {
+      "id": 33,
+      "name": "LinkedIn Ads",
+      "category": "Marketing and Ads",
+      "accessModel": "admin_approval",
+      "blocker": "Requires LinkedIn Marketing API Program approval and OAuth2 setup."
+    },
+    {
+      "id": 49,
+      "name": "Amazon Selling Partner",
+      "category": "Ecommerce",
+      "accessModel": "admin_approval",
+      "blocker": "Requires developer registration and approval via the Solution Provider Portal before API access is granted."
+    },
+    {
+      "id": 59,
+      "name": "Waterfall.io",
+      "category": "Data SEO and Scraping",
+      "accessModel": "partner_or_sales",
+      "blocker": "No public API documentation or self-serve access found; requires sales contact to obtain API keys and integration details."
+    },
+    {
+      "id": 84,
+      "name": "Paygent Connect",
+      "category": "Finance and Fintech",
+      "accessModel": "partner_or_sales",
+      "blocker": ""
+    },
+    {
+      "id": 91,
+      "name": "NotebookLM",
+      "category": "AI Research and Media",
+      "accessModel": "partner_or_sales",
+      "blocker": "Requires Google Cloud Agentspace / NotebookLM Enterprise license"
+    }
+  ],
   "headlines": [
-    "OAUTH2 is the dominant auth pattern (1/2 apps, 50%), while CRM and Sales is the most self-serve category.",
-    "2 of 2 apps are immediate net-new toolkit wins (self-serve credentials, public API docs, not yet in Composio's catalog; 0 already covered).",
-    "Access gating clusters heaviest in CRM and Sales.",
-    "2 apps already ship an official MCP server (Salesforce, Pipedrive)."
+    "UNKNOWN is the dominant auth pattern (41/100 apps, 41%), while Productivity and PM is the most self-serve category.",
+    "25 of 100 apps are immediate self-serve build candidates (public REST/GraphQL docs, toolkit_ready; live Composio catalog cross-check skipped due to 401 key).",
+    "The #1 buildability blocker is JS-Rendered / Unverified Docs (38 apps), clustering heaviest in Data SEO and Scraping.",
+    "23 apps already ship an official MCP server (Attio, Close, DealCloud, Slack, Google Ads, Shopify, ...)."
   ]
 }
