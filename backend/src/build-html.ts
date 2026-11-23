@@ -135,7 +135,7 @@ export function renderCaseStudyHtml(params: {
   } = params;
 
   const verifiedCount = records.filter((r) => r.pass2Verified).length;
-  const topAuth = patterns.authDistribution[0];
+  const topAuth = patterns.authDistribution.find((a) => a.method !== "unknown") ?? patterns.authDistribution[0];
   const topBlocker = patterns.topBlockers[0];
   const maxAuthCount = Math.max(1, ...patterns.authDistribution.map((a) => a.count));
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T13:03:51.982Z",
+  "generatedAt": "2026-11-23T13:16:18.428Z",
   "totalApps": 100,
   "authDistribution": [
     {
@@ -475,7 +475,7 @@
     }
   ],
   "headlines": [
-    "UNKNOWN is the dominant auth pattern (41/100 apps, 41%), while Productivity and PM is the most self-serve category.",
+    "Among identified auth schemes, OAUTH2 dominates (33/100 apps, 33%), while 41 apps remain unknown due to JS-rendered or gated docs; Productivity and PM is the most self-serve category.",
     "25 of 100 apps are immediate self-serve build candidates (public REST/GraphQL docs, toolkit_ready; live Composio catalog cross-check skipped due to 401 key).",
     "The #1 buildability blocker is JS-Rendered / Unverified Docs (38 apps), clustering heaviest in Data SEO and Scraping.",
     "23 apps already ship an official MCP server (Attio, Close, DealCloud, Slack, Google Ads, Shopify, ...)."

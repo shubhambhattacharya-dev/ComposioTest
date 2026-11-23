@@ -204,12 +204,13 @@ export function computePatterns(records: AppRecordT[]): PatternsSummary {
       blocker: r.buildability.blocker ?? r.accessModel,
     }));
 
-  const topAuth = authDistribution[0];
+  const topKnownAuth = authDistribution.find((a) => a.method !== "unknown");
+  const unknownAuthCount = authDistribution.find((a) => a.method === "unknown")?.count ?? 0;
   const topBlocker = topBlockers[0];
 
   const headlines = [
-    topAuth
-      ? `${topAuth.method.toUpperCase()} is the dominant auth pattern (${topAuth.count}/${total} apps, ${topAuth.pct}%), while ${mostOpenCategory} is the most self-serve category.`
+    topKnownAuth
+      ? `Among identified auth schemes, ${topKnownAuth.method.toUpperCase()} dominates (${topKnownAuth.count}/${total} apps, ${topKnownAuth.pct}%), while ${unknownAuthCount} apps remain unknown due to JS-rendered or gated docs; ${mostOpenCategory} is the most self-serve category.`
       : `Analyzed ${total} SaaS apps across 10 categories.`,
     composioOverlap.unknown === total
       ? `${easyNetNewWins.length} of ${total} apps are immediate self-serve build candidates (public REST/GraphQL docs, toolkit_ready; live Composio catalog cross-check skipped due to 401 key).`
