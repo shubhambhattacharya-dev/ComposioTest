@@ -3,7 +3,7 @@
 An agent-built Product Ops research pipeline across **100 SaaS apps (10 categories)** evaluating toolkit buildability: authentication methods, self-serve vs gated access, API surface, MCP readiness, and Composio catalog overlap — verified by a deterministic HTTP + keyword grounding pass and a stratified 20-app human audit.
 
 ## Live Deliverable
-- **Case study page (Vercel):** *(update after deploy)*
+- **Case study page (Vercel):** https://composiotest-frontend.vercel.app/
 - **Self-contained offline file:** `backend/dist/index.html` (`< 1 MB`, opens directly via `file://` with embedded JSON + CSV/JSON download buttons)
 
 ## Quick Start (Reviewer Commands)
