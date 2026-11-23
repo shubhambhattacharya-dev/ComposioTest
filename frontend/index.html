@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An evidence-led research case study on the buildability of 100 SaaS apps for Composio.">
+  <title>App Research / Composio Field Notes</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Page navigation">
+      <a class="brand" href="#overview"><span class="brand-mark">c/</span><span><span class="brand-name">COMPOSIO</span><span class="brand-sub">FIELD NOTES · 2026</span></span></a>
+      <div class="side-label">Case study</div>
+      <nav class="side-nav">
+        <a class="active" href="#overview"><span class="nav-icon">01</span>Overview</a>
+        <a href="#method"><span class="nav-icon">02</span>Method</a>
+        <a href="#findings"><span class="nav-icon">03</span>Findings</a>
+        <a href="#audit"><span class="nav-icon">04</span>Accuracy audit</a>
+        <a href="#directory"><span class="nav-icon">05</span>App directory</a>
+      </nav>
+      <div class="side-label">Reference</div>
+      <nav class="side-nav"><a href="#integrity"><span class="nav-icon">↗</span>Evidence standard</a></nav>
+      <div class="side-bottom"><strong>Product Ops take-home</strong>100 SaaS apps · 10 categories</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><div class="crumb">Research / <b>Toolkit buildability</b></div><div class="top-actions"><span class="status-pill"><span aria-hidden="true">●</span>Research not yet run</span><a class="button" href="#directory">Browse apps ↓</a></div></header>
+      <div class="content">
+        <section class="hero" id="overview">
+          <div class="hero-main"><div class="eyebrow">Product operations · Research study</div><h1>What does it take to build for an app?</h1><p class="hero-copy">A structured assessment of SaaS products through the lens of toolkit buildability: their APIs, authentication, access models, and readiness for AI agents.</p></div>
+          <aside class="hero-aside"><span>The question</span><strong>Where can Composio build next?</strong><p>Evidence before inference. Unknowns stay unknown.</p></aside>
+        </section>
+        <div class="truth-note"><span class="note-mark">i</span><span><strong>Seed data, not research results.</strong> This frontend starts with the assignment's 100-app list and source hints. App attributes, findings, and accuracy figures remain unverified until the research pipeline and audit are complete.</span></div>
+
+        <section class="metrics" aria-label="Research status">
+          <div class="metric"><div class="metric-value" id="metric-total">100</div><div class="metric-label">Apps in assignment scope</div></div>
+          <div class="metric"><div class="metric-value pending" id="metric-researched">0</div><div class="metric-label">Researched records</div></div>
+          <div class="metric"><div class="metric-value pending" id="metric-verified">0</div><div class="metric-label">Verifier-passed records</div></div>
+          <div class="metric"><div class="metric-value pending">—</div><div class="metric-label">Human-audited accuracy</div></div>
+        </section>
+
+        <section class="section" id="method">
+          <div class="section-head"><div><div class="section-index">01 / Method</div><h2>Three passes. One evidence trail.</h2><p class="section-desc">The pipeline separates initial collection from verification and human judgment.</p></div><span class="micro-tag">RESEARCH WORKFLOW</span></div>
+          <div class="pipeline">
+            <article class="pass"><div class="pass-top"><span class="pass-no">1</span><h3>Research agent</h3></div><p>Collect product facts from official developer sources. Save evidence URLs and supporting text with each field.</p><div class="pass-foot">DISCOVER · EXTRACT · CHECKPOINT</div></article>
+            <article class="pass"><div class="pass-top"><span class="pass-no">2</span><h3>Automated verifier</h3></div><p>Re-fetch sources, check URL health, and test whether the cited page supports each claimed attribute.</p><div class="pass-foot">FETCH · GROUND · FLAG</div></article>
+            <article class="pass human"><div class="pass-top"><span class="pass-no">3</span><h3>Human audit</h3></div><p>Review a stratified sample, resolve ambiguous calls, and publish corrections, misses, and accuracy.</p><div class="pass-foot">SAMPLE · REVIEW · RECYCLE</div></article>
+          </div>
+        </section>
+
+        <section class="section" id="findings">
+          <div class="section-head"><div><div class="section-index">02 / Findings</div><h2>Patterns worth surfacing</h2><p class="section-desc">These insights should be computed from verified records, not guessed from the seed list.</p></div><span class="micro-tag">AWAITING VERIFIED DATA</span></div>
+          <div class="finding-grid">
+            <article class="finding"><div class="finding-label">Auth distribution</div><p class="finding-value">Most common method <em>— pending research</em></p></article>
+            <article class="finding"><div class="finding-label">Self-serve access</div><p class="finding-value">Share by category <em>— pending research</em></p></article>
+            <article class="finding"><div class="finding-label">Buildability</div><p class="finding-value">Net-new toolkit opportunities <em>— pending SDK cross-check</em></p></article>
+            <article class="finding"><div class="finding-label">Top blockers</div><p class="finding-value">Most frequent access or API blockers <em>— pending research</em></p></article>
+          </div>
+        </section>
+
+        <section class="section" id="audit">
+          <div class="section-head"><div><div class="section-index">03 / Accuracy audit</div><h2>Show the misses, too.</h2><p class="section-desc">Accuracy is calculated from reviewed fields. No pass rate is filled in before the audit.</p></div><span class="micro-tag">NOT YET RUN</span></div>
+          <div class="audit" role="table" aria-label="Accuracy by research pass">
+            <div class="audit-row head" role="row"><span>Pass</span><span>Check</span><span>Accuracy</span><span>Sample</span></div>
+            <div class="audit-row" role="row"><strong>Pass 1 · Agent</strong><span>Initial extraction</span><span class="audit-pending">Pending</span><span class="audit-pending">—</span></div>
+            <div class="audit-row" role="row"><strong>Pass 2 · Verifier</strong><span>URL + field grounding</span><span class="audit-pending">Pending</span><span class="audit-pending">—</span></div>
+            <div class="audit-row" role="row"><strong>Pass 3 · Human</strong><span>Stratified review</span><span class="audit-pending">Pending</span><span class="audit-pending">—</span></div>
+            <div class="audit-foot">The final case study should list the sampled apps, field-level hits and misses, and the audit method.</div>
+          </div>
+        </section>
+
+        <section class="section" id="directory">
+          <div class="section-head"><div><div class="section-index">04 / Dataset</div><h2>App directory <span id="directory-total">(100)</span></h2><p class="section-desc">Assignment seed with source hints. A hint URL is not proof that any field has been verified.</p></div>
+            <div class="directory-controls"><input class="control search" id="search" type="search" placeholder="Search app or category" aria-label="Search app or category"><select class="control" id="category-filter" aria-label="Filter by category"><option value="all">All categories</option></select><button class="button" id="download-json" type="button">↓ JSON</button><button class="button" id="download-csv" type="button">↓ CSV</button></div>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>Application</th><th>Category</th><th>Auth</th><th>Access</th><th>Buildability</th><th>Seed source</th></tr></thead><tbody id="app-rows"></tbody></table><div class="empty" id="empty-state" hidden>No apps match these filters.</div><div class="table-bottom"><span id="result-count">Loading records…</span><span>Attributes not researched · Source hints only</span></div></div>
+        </section>
+
+        <section class="section" id="integrity">
+          <div class="section-head"><div><div class="section-index">05 / Integrity</div><h2>Evidence standard</h2></div></div>
+          <div class="integrity"><article class="integrity-card"><h3>What a source link means</h3><p>The linked URL comes from the assignment seed. It is a starting point for research, not a verified citation. Claims should link to the exact page that supports them and retain the supporting evidence.</p></article><article class="integrity-card"><h3>Where a human is needed</h3><p>JS-rendered documentation, partner-gated access, trial signup requirements, and ambiguous API coverage need review. Record uncertainty and misses openly instead of filling gaps with guesses.</p></article></div>
+        </section>
+        <footer class="footer"><span><strong>COMPOSIO / FIELD NOTES</strong> · Product Ops take-home</span><span>Built as a standalone HTML, CSS, and JavaScript page.</span></footer>
+      </div>
+    </main>
+  </div>
+  <script src="./app.js" defer></script>
+</body>
+</html>

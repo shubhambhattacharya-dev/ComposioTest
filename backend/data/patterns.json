@@ -1,0 +1,163 @@
+{
+  "generatedAt": "2026-11-23T12:14:11.985Z",
+  "totalApps": 2,
+  "authDistribution": [
+    {
+      "method": "oauth2",
+      "count": 1,
+      "pct": 50
+    },
+    {
+      "method": "jwt",
+      "count": 1,
+      "pct": 50
+    },
+    {
+      "method": "api_key",
+      "count": 1,
+      "pct": 50
+    }
+  ],
+  "accessDistribution": [
+    {
+      "model": "self_serve_trial",
+      "count": 1,
+      "pct": 50
+    },
+    {
+      "model": "self_serve_free",
+      "count": 1,
+      "pct": 50
+    }
+  ],
+  "selfServeByCategory": [
+    {
+      "category": "CRM and Sales",
+      "total": 2,
+      "selfServe": 2,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 100
+    },
+    {
+      "category": "Support and Helpdesk",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    },
+    {
+      "category": "Comms and Messaging",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    },
+    {
+      "category": "Marketing and Ads",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    },
+    {
+      "category": "Ecommerce",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    },
+    {
+      "category": "Data SEO and Scraping",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    },
+    {
+      "category": "Dev Infra and Data",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    },
+    {
+      "category": "Productivity and PM",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    },
+    {
+      "category": "Finance and Fintech",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    },
+    {
+      "category": "AI Research and Media",
+      "total": 0,
+      "selfServe": 0,
+      "gated": 0,
+      "unknown": 0,
+      "selfServePct": 0
+    }
+  ],
+  "mostGatedCategory": "CRM and Sales",
+  "mostOpenCategory": "CRM and Sales",
+  "mcpReadiness": {
+    "official_mcp": 2,
+    "community_mcp": 0,
+    "sdk_only": 0,
+    "none_found": 0,
+    "unknown": 0,
+    "officialApps": [
+      "Salesforce",
+      "Pipedrive"
+    ]
+  },
+  "composioOverlap": {
+    "yes": 0,
+    "no": 0,
+    "unknown": 2
+  },
+  "buildabilityDistribution": {
+    "toolkit_ready": 2,
+    "needs_work": 0,
+    "blocked": 0,
+    "unknown": 0
+  },
+  "topBlockers": [],
+  "easyNetNewWins": [
+    {
+      "id": 1,
+      "name": "Salesforce",
+      "category": "CRM and Sales",
+      "auth": "oauth2, jwt",
+      "docsUrl": "https://developer.salesforce.com/docs"
+    },
+    {
+      "id": 3,
+      "name": "Pipedrive",
+      "category": "CRM and Sales",
+      "auth": "api_key",
+      "docsUrl": "https://developers.pipedrive.com/docs/api/v1"
+    }
+  ],
+  "outreachRequired": [],
+  "headlines": [
+    "OAUTH2 is the dominant auth pattern (1/2 apps, 50%), while CRM and Sales is the most self-serve category.",
+    "2 of 2 apps are immediate net-new toolkit wins (self-serve credentials, public API docs, not yet in Composio's catalog; 0 already covered).",
+    "Access gating clusters heaviest in CRM and Sales.",
+    "2 apps already ship an official MCP server (Salesforce, Pipedrive)."
+  ]
+}

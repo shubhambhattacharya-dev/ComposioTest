@@ -1,0 +1,36 @@
+{
+  "name": "composio-100-apps-backend",
+  "version": "1.0.0",
+  "description": "Agent-built Product Ops research pipeline across 100 SaaS apps with Composio SDK catalog cross-check, automated grounding verification, and stratified human audit.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/research.ts",
+    "research": "tsx src/research.ts",
+    "verify": "tsx src/verify.ts",
+    "sample": "tsx src/sample.ts",
+    "audit": "tsx src/audit.ts",
+    "build": "tsx src/build-html.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@composio/core": "^0.31.0",
+    "@google/genai": "^1.0.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "openai": "^4.70.0",
+    "p-limit": "^6.2.0",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  }
+}

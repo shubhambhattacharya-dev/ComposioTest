@@ -1,0 +1,5427 @@
+[
+  {
+    "round": 0,
+    "total": 100,
+    "passed": 77,
+    "failed": 23,
+    "verdicts": [
+      {
+        "id": 1,
+        "name": "Salesforce",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.salesforce.com/docs",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "HubSpot",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=api_key"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=api_key"
+            ],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Pipedrive",
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.pipedrive.com/docs/api/v1",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [
+              "auth=api_key:api token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Attio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.attio.com/rest-api/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Twenty",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.twenty.com/developers/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Podio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.podio.com/doc",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Zoho CRM",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://www.zoho.com/crm/developer/docs/api/v6/",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Close",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.close.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Copper",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.copper.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "DealCloud",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://api.docs.dealcloud.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Zendesk",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.zendesk.com/api-reference/",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2,auth=api_key,hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Intercom",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.intercom.com/docs",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Freshdesk",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.freshdesk.com/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Front",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://dev.frontapp.com/reference/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Pylon",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "LiveAgent",
+        "ok": false,
+        "failures": [
+          "fetch_error:https://developers.liveagent.com/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.liveagent.com/",
+            "httpStatus": 0,
+            "ok": false,
+            "failures": [
+              "fetch_error:https://developers.liveagent.com/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Plain",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.plain.com/docs/graphql-reference/queries/account",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "apiSurface=graphql:graphql"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Help Scout",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.helpscout.com/mailbox-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Gorgias",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.gorgias.com/reference/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Gladly",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.gladly.com/rest/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Slack",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.slack.dev/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Twilio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.twilio.com/docs/usage/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:key",
+              "auth=basic:basic"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Zoho Cliq",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Lark (Larksuite)",
+        "ok": false,
+        "failures": [
+          "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://open.larksuite.com/document/home/index",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "js_shell_ungrounded:auth=oauth2,hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Pumble",
+        "ok": false,
+        "failures": [
+          "http_404:https://pumble.com/help/integrations/pumble-api/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://pumble.com/help/integrations/pumble-api/",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://pumble.com/help/integrations/pumble-api/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Discord",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.discord.com/developers/intro",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Telegram",
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://core.telegram.org/bots/api",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [
+              "auth=api_key:key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "WhatsApp Business",
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Aircall",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.aircall.io/api-references",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Vonage",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.vonage.com/en/documentation",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Google Ads",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction?hl=zh-cn",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Meta Ads",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "LinkedIn Ads",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2,hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "GoHighLevel",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://highlevel.stoplight.io/docs/integrations/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "Mailchimp",
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://mailchimp.com/developer/marketing/api/root/list",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Klaviyo",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.klaviyo.com/en/reference",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "systeme.io",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.systeme.io/reference/getting-started",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Pinterest",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Threads (Meta)",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/threads",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "SendGrid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "name": "Shopify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://shopify.dev/docs/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "WooCommerce",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "BigCommerce",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/management/abandoned-carts",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token",
+              "auth=api_key:api token",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "Salesforce Commerce Cloud",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.salesforce.com/developer-centers/commerce-cloud",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "Magento (Adobe Commerce)",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.adobe.com/commerce/webapi/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "Squarespace",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.squarespace.com/commerce-apis/contacts",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "Ecwid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ecwid.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "Gumroad",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://gumroad.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "Amazon Selling Partner",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer-docs.amazon/sp-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "fanbasis",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://commas.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "DataForSEO",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.dataforseo.com/v3/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "SE Ranking",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://seranking.com/api.html",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "Ahrefs",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "MrScraper",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api token",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "name": "Apify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.apify.com/api/v2",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "name": "Firecrawl",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.firecrawl.dev/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "name": "Bright Data",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.brightdata.com/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "Sherlock",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://github.com/sherlock-project/sherlock",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "name": "Waterfall.io",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.waterfall.io/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Clay",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://university.clay.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "name": "GitHub",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.github.com/en/rest",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "Vercel",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://vercel.com/docs/rest-api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "Netlify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "Cloudflare",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.cloudflare.com/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "Supabase",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://supabase.com/docs/reference/api/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "Neo4j",
+        "ok": false,
+        "failures": [
+          "http_404:https://neo4j.com/docs/api/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://neo4j.com/docs/api/",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://neo4j.com/docs/api/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "Snowflake",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "MongoDB Atlas",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.mongodb.com/docs/atlas/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "name": "Datadog",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.datadoghq.com/api/latest/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "Sentry",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.sentry.io/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "name": "Notion",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.notion.com/reference/intro",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "name": "Airtable",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=api_key"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://airtable.com/developers/web/api/introduction",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=api_key"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "name": "Linear",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://linear.app/developers/graphql",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "apiSurface=graphql:graphql"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "Jira",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "name": "Asana",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=api_key"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.asana.com/docs/overview",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=api_key"
+            ],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "name": "Monday.com",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "apiSurface=graphql:graphql",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "name": "ClickUp",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://clickup.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "name": "Coda",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.superhuman.com/developers/apis/v1",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "name": "Smartsheet",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://smartsheet.redoc.ly/",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2"
+            ],
+            "groundedKeywords": [
+              "auth=basic:basic"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Harvest",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://help.getharvest.com/api-v2/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "name": "Stripe",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.stripe.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "name": "Plaid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://plaid.com/docs/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "name": "Binance",
+        "ok": false,
+        "failures": [
+          "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
+            "httpStatus": 202,
+            "ok": false,
+            "failures": [
+              "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "name": "Paygent Connect",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://secure.nmi.com/merchants/resources/integration/integration_portal.php",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 85,
+        "name": "iPayX",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.ipayx.ai/docs",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "name": "QuickBooks",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 87,
+        "name": "Xero",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.xero.com/documentation/api/accounting/overview",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "name": "Brex",
+        "ok": false,
+        "failures": [
+          "http_404:https://developer.brex.com/docs/welcome"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.brex.com/docs/welcome",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://developer.brex.com/docs/welcome"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "name": "Ramp",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ramp.com/developer-api/v1/overview/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "PitchBook",
+        "ok": false,
+        "failures": [
+          "http_403:https://pitchbook.com/products/direct-data"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://pitchbook.com/products/direct-data",
+            "httpStatus": 403,
+            "ok": false,
+            "failures": [
+              "http_403:https://pitchbook.com/products/direct-data"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 91,
+        "name": "NotebookLM",
+        "ok": false,
+        "failures": [
+          "http_404:https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "name": "Otter AI",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://help.otter.ai/hc/en-us",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 93,
+        "name": "Fathom",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.fathom.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 94,
+        "name": "Consensus",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://consensus.app/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 95,
+        "name": "Reducto",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.reducto.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 96,
+        "name": "Devin",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.devin.ai/api-reference/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 97,
+        "name": "higgsfield",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://higgsfield.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 98,
+        "name": "Mermaid CLI",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://github.com/mermaid-js/mermaid-cli",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "name": "YouTube Transcript",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://transcriptapi.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "name": "Grain",
+        "ok": false,
+        "failures": [
+          "http_404:https://grain.com/developers"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://grain.com/developers",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://grain.com/developers"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "round": 1,
+    "total": 100,
+    "passed": 86,
+    "failed": 14,
+    "verdicts": [
+      {
+        "id": 1,
+        "name": "Salesforce",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.salesforce.com/docs",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "HubSpot",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Pipedrive",
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.pipedrive.com/docs/api/v1",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Attio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.attio.com/rest-api/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Twenty",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.twenty.com/developers/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Podio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.podio.com/doc",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Zoho CRM",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.zoho.com/crm/developer/docs/api/v6/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Close",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.close.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Copper",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.copper.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "DealCloud",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://api.docs.dealcloud.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Zendesk",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.zendesk.com/api-reference/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Intercom",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.intercom.com/docs",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Freshdesk",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.freshdesk.com/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Front",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://dev.frontapp.com/reference/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Pylon",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "LiveAgent",
+        "ok": false,
+        "failures": [
+          "fetch_error:https://developers.liveagent.com/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.liveagent.com/",
+            "httpStatus": 0,
+            "ok": false,
+            "failures": [
+              "fetch_error:https://developers.liveagent.com/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Plain",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.plain.com/docs/graphql-reference/queries/account",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "apiSurface=graphql:graphql"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Help Scout",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.helpscout.com/mailbox-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Gorgias",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.gorgias.com/reference/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Gladly",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.gladly.com/rest/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Slack",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.slack.dev/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Twilio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.twilio.com/docs/usage/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:key",
+              "auth=basic:basic"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Zoho Cliq",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Lark (Larksuite)",
+        "ok": false,
+        "failures": [
+          "js_shell_ungrounded:auth=oauth2"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://open.larksuite.com/document/home/index",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "js_shell_ungrounded:auth=oauth2"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Pumble",
+        "ok": false,
+        "failures": [
+          "http_404:https://pumble.com/help/integrations/pumble-api/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://pumble.com/help/integrations/pumble-api/",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://pumble.com/help/integrations/pumble-api/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Discord",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.discord.com/developers/intro",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Telegram",
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://core.telegram.org/bots/api",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "WhatsApp Business",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Aircall",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.aircall.io/api-references",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Vonage",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.vonage.com/en/documentation",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Google Ads",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction?hl=zh-cn",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Meta Ads",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "LinkedIn Ads",
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "GoHighLevel",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://highlevel.stoplight.io/docs/integrations/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "Mailchimp",
+        "ok": false,
+        "failures": [
+          "grounding_miss:hasMcp=official_mcp"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://mailchimp.com/developer/marketing/api/root/list",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:hasMcp=official_mcp"
+            ],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Klaviyo",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.klaviyo.com/en/reference",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "systeme.io",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.systeme.io/reference/getting-started",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Pinterest",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Threads (Meta)",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/threads",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "SendGrid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "name": "Shopify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://shopify.dev/docs/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "WooCommerce",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "BigCommerce",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/management/abandoned-carts",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token",
+              "auth=api_key:api token",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "Salesforce Commerce Cloud",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.salesforce.com/developer-centers/commerce-cloud",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "Magento (Adobe Commerce)",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.adobe.com/commerce/webapi/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "Squarespace",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.squarespace.com/commerce-apis/contacts",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "Ecwid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ecwid.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "Gumroad",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://gumroad.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "Amazon Selling Partner",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer-docs.amazon/sp-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "fanbasis",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://commas.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "DataForSEO",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.dataforseo.com/v3/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "SE Ranking",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://seranking.com/api.html",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "Ahrefs",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "MrScraper",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api token",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "name": "Apify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.apify.com/api/v2",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "name": "Firecrawl",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.firecrawl.dev/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "name": "Bright Data",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.brightdata.com/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "Sherlock",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://github.com/sherlock-project/sherlock",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "name": "Waterfall.io",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.waterfall.io/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Clay",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://university.clay.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "name": "GitHub",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.github.com/en/rest",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "Vercel",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://vercel.com/docs/rest-api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "Netlify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "Cloudflare",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.cloudflare.com/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "Supabase",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://supabase.com/docs/reference/api/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "Neo4j",
+        "ok": false,
+        "failures": [
+          "http_404:https://neo4j.com/docs/api/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://neo4j.com/docs/api/",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://neo4j.com/docs/api/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "Snowflake",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "MongoDB Atlas",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.mongodb.com/docs/atlas/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "name": "Datadog",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.datadoghq.com/api/latest/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "Sentry",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.sentry.io/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "name": "Notion",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.notion.com/reference/intro",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "name": "Airtable",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://airtable.com/developers/web/api/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "name": "Linear",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://linear.app/developers/graphql",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "apiSurface=graphql:graphql"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "Jira",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "name": "Asana",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=api_key"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.asana.com/docs/overview",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=api_key"
+            ],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "name": "Monday.com",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "apiSurface=graphql:graphql",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "name": "ClickUp",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://clickup.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "name": "Coda",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.superhuman.com/developers/apis/v1",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "name": "Smartsheet",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://smartsheet.redoc.ly/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=basic:basic"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Harvest",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://help.getharvest.com/api-v2/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "name": "Stripe",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.stripe.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "name": "Plaid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://plaid.com/docs/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "name": "Binance",
+        "ok": false,
+        "failures": [
+          "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
+            "httpStatus": 202,
+            "ok": false,
+            "failures": [
+              "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "name": "Paygent Connect",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://secure.nmi.com/merchants/resources/integration/integration_portal.php",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 85,
+        "name": "iPayX",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.ipayx.ai/docs",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "name": "QuickBooks",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 87,
+        "name": "Xero",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.xero.com/documentation/api/accounting/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "name": "Brex",
+        "ok": false,
+        "failures": [
+          "http_404:https://developer.brex.com/docs/welcome"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.brex.com/docs/welcome",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://developer.brex.com/docs/welcome"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "name": "Ramp",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ramp.com/developer-api/v1/overview/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "PitchBook",
+        "ok": false,
+        "failures": [
+          "http_403:https://pitchbook.com/products/direct-data"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://pitchbook.com/products/direct-data",
+            "httpStatus": 403,
+            "ok": false,
+            "failures": [
+              "http_403:https://pitchbook.com/products/direct-data"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 91,
+        "name": "NotebookLM",
+        "ok": false,
+        "failures": [
+          "http_404:https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "name": "Otter AI",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://help.otter.ai/hc/en-us",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 93,
+        "name": "Fathom",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.fathom.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 94,
+        "name": "Consensus",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://consensus.app/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 95,
+        "name": "Reducto",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.reducto.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 96,
+        "name": "Devin",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.devin.ai/api-reference/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 97,
+        "name": "higgsfield",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://higgsfield.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 98,
+        "name": "Mermaid CLI",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://github.com/mermaid-js/mermaid-cli",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "name": "YouTube Transcript",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://transcriptapi.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "name": "Grain",
+        "ok": false,
+        "failures": [
+          "http_404:https://grain.com/developers"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://grain.com/developers",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://grain.com/developers"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "round": 2,
+    "total": 100,
+    "passed": 88,
+    "failed": 12,
+    "verdicts": [
+      {
+        "id": 1,
+        "name": "Salesforce",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.salesforce.com/docs",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "HubSpot",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.hubspot.com/docs/api-reference/latest/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Pipedrive",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.pipedrive.com/docs/api/v1",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Attio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.attio.com/rest-api/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Twenty",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.twenty.com/developers/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Podio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.podio.com/doc",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Zoho CRM",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.zoho.com/crm/developer/docs/api/v6/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Close",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.close.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Copper",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.copper.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "DealCloud",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://api.docs.dealcloud.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Zendesk",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.zendesk.com/api-reference/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Intercom",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.intercom.com/docs",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Freshdesk",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.freshdesk.com/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Front",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://dev.frontapp.com/reference/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Pylon",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.usepylon.com/pylon-docs/developer/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "LiveAgent",
+        "ok": false,
+        "failures": [
+          "fetch_error:https://developers.liveagent.com/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.liveagent.com/",
+            "httpStatus": 0,
+            "ok": false,
+            "failures": [
+              "fetch_error:https://developers.liveagent.com/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Plain",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.plain.com/docs/graphql-reference/queries/account",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "apiSurface=graphql:graphql"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Help Scout",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.helpscout.com/mailbox-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Gorgias",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.gorgias.com/reference/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Gladly",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.gladly.com/rest/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Slack",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.slack.dev/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Twilio",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.twilio.com/docs/usage/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:key",
+              "auth=basic:basic"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Zoho Cliq",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Lark (Larksuite)",
+        "ok": false,
+        "failures": [
+          "js_shell_ungrounded:auth=oauth2"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://open.larksuite.com/document/home/index",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "js_shell_ungrounded:auth=oauth2"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Pumble",
+        "ok": false,
+        "failures": [
+          "http_404:https://pumble.com/help/integrations/pumble-api/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://pumble.com/help/integrations/pumble-api/",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://pumble.com/help/integrations/pumble-api/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Discord",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.discord.com/developers/intro",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Telegram",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://core.telegram.org/bots/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "WhatsApp Business",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Aircall",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.aircall.io/api-references",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Vonage",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.vonage.com/en/documentation",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Google Ads",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction?hl=zh-cn",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Meta Ads",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "LinkedIn Ads",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=oauth2"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=oauth2"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "GoHighLevel",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://highlevel.stoplight.io/docs/integrations/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "Mailchimp",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://mailchimp.com/developer/marketing/api/root/list",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Klaviyo",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.klaviyo.com/en/reference",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "systeme.io",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.systeme.io/reference/getting-started",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Pinterest",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Threads (Meta)",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.facebook.com/documentation/threads",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "SendGrid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "name": "Shopify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://shopify.dev/docs/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "WooCommerce",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "BigCommerce",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/management/abandoned-carts",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:access token",
+              "auth=api_key:api token",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "Salesforce Commerce Cloud",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.salesforce.com/developer-centers/commerce-cloud",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "Magento (Adobe Commerce)",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.adobe.com/commerce/webapi/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "Squarespace",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.squarespace.com/commerce-apis/contacts",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "Ecwid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ecwid.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "Gumroad",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://gumroad.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "Amazon Selling Partner",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer-docs.amazon/sp-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:token"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "fanbasis",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://commas.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "DataForSEO",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.dataforseo.com/v3/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "SE Ranking",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://seranking.com/api.html",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "Ahrefs",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "MrScraper",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.mrscraper.com/docs/getting-started/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api token",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "name": "Apify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.apify.com/api/v2",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "name": "Firecrawl",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.firecrawl.dev/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:model context protocol"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "name": "Bright Data",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.brightdata.com/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "Sherlock",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://github.com/sherlock-project/sherlock",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "name": "Waterfall.io",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.waterfall.io/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Clay",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://university.clay.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "name": "GitHub",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.github.com/en/rest",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "Vercel",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://vercel.com/docs/rest-api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "Netlify",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "Cloudflare",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.cloudflare.com/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "Supabase",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://supabase.com/docs/reference/api/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "Neo4j",
+        "ok": false,
+        "failures": [
+          "http_404:https://neo4j.com/docs/api/"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://neo4j.com/docs/api/",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://neo4j.com/docs/api/"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "Snowflake",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "MongoDB Atlas",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://www.mongodb.com/docs/atlas/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "name": "Datadog",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.datadoghq.com/api/latest/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "Sentry",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.sentry.io/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "name": "Notion",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.notion.com/reference/intro",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "name": "Airtable",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://airtable.com/developers/web/api/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "name": "Linear",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://linear.app/developers/graphql",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "apiSurface=graphql:graphql"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "Jira",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=basic:basic auth"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "name": "Asana",
+        "ok": false,
+        "failures": [
+          "grounding_miss:auth=api_key"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.asana.com/docs/overview",
+            "httpStatus": 200,
+            "ok": false,
+            "failures": [
+              "grounding_miss:auth=api_key"
+            ],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "name": "Monday.com",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.monday.com/api-reference/docs/introduction-to-graphql",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "apiSurface=graphql:graphql",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "name": "ClickUp",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://clickup.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "name": "Coda",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.superhuman.com/developers/apis/v1",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "name": "Smartsheet",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://smartsheet.redoc.ly/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=basic:basic"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Harvest",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://help.getharvest.com/api-v2/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "name": "Stripe",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.stripe.com/api",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "name": "Plaid",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://plaid.com/docs/api/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "name": "Binance",
+        "ok": false,
+        "failures": [
+          "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG",
+            "httpStatus": 202,
+            "ok": false,
+            "failures": [
+              "http_202:https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "name": "Paygent Connect",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://secure.nmi.com/merchants/resources/integration/integration_portal.php",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 85,
+        "name": "iPayX",
+        "ok": false,
+        "failures": [
+          "http_500:https://www.ipayx.ai/docs"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://www.ipayx.ai/docs",
+            "httpStatus": 500,
+            "ok": false,
+            "failures": [
+              "http_500:https://www.ipayx.ai/docs"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "name": "QuickBooks",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 87,
+        "name": "Xero",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.xero.com/documentation/api/accounting/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "name": "Brex",
+        "ok": false,
+        "failures": [
+          "http_404:https://developer.brex.com/docs/welcome"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://developer.brex.com/docs/welcome",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://developer.brex.com/docs/welcome"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "name": "Ramp",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.ramp.com/developer-api/v1/overview/introduction",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "PitchBook",
+        "ok": false,
+        "failures": [
+          "http_404:https://pitchbook.com/products/direct-data"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://pitchbook.com/products/direct-data",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://pitchbook.com/products/direct-data"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 91,
+        "name": "NotebookLM",
+        "ok": false,
+        "failures": [
+          "http_404:https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://cloud.google.com/agentspace/notebooklm-enterprise/docs/overview"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "name": "Otter AI",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://help.otter.ai/hc/en-us",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 93,
+        "name": "Fathom",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://developers.fathom.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=oauth2:oauth",
+              "auth=api_key:api key"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 94,
+        "name": "Consensus",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://consensus.app/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": true
+          }
+        ]
+      },
+      {
+        "id": 95,
+        "name": "Reducto",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.reducto.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 96,
+        "name": "Devin",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://docs.devin.ai/api-reference/overview",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "hasMcp=official_mcp:mcp"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 97,
+        "name": "higgsfield",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://higgsfield.ai/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 98,
+        "name": "Mermaid CLI",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://github.com/mermaid-js/mermaid-cli",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "name": "YouTube Transcript",
+        "ok": true,
+        "failures": [],
+        "urlVerdicts": [
+          {
+            "url": "https://transcriptapi.com/",
+            "httpStatus": 200,
+            "ok": true,
+            "failures": [],
+            "groundedKeywords": [
+              "auth=api_key:api key",
+              "hasMcp=official_mcp:mcp server"
+            ],
+            "jsShellDetected": false
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "name": "Grain",
+        "ok": false,
+        "failures": [
+          "http_404:https://grain.com/developers"
+        ],
+        "urlVerdicts": [
+          {
+            "url": "https://grain.com/developers",
+            "httpStatus": 404,
+            "ok": false,
+            "failures": [
+              "http_404:https://grain.com/developers"
+            ],
+            "groundedKeywords": [],
+            "jsShellDetected": false
+          }
+        ]
+      }
+    ]
+  }
+]
